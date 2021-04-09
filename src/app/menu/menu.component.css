@@ -1,0 +1,56 @@
+.accordion {
+  list-style-type: none;
+  margin: 1.6em 2em;
+  padding: 0;
+}
+
+.accordion .menu {
+  display: block;
+  background-color: transparent;
+  position: relative;
+  padding: 0.8em 1em;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+.accordion a.menu {
+  text-decoration: none;
+  color: var(--font-color-primary);
+}
+
+.accordion .menu:hover {
+  background-color: rgba(var(--rgb-primary), 0.03);
+}
+
+.accordion li {
+  width: fit-content;
+}
+
+.accordion li.active .menu {
+  color: var(--color-secondary);
+  background-color: rgba(var(--rgb-secondary), 0.1);
+}
+
+.submenu {
+  list-style-type: none;
+  margin: 0.2em 0 0 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.submenu a {
+  display: block;
+  color: var(--font-color-primary);
+  text-decoration: none;
+  padding: 0.8em 1em;
+  border-radius: 5px;
+  margin-left: 1.5em;
+  transition: all 0.25s ease-in-out;
+}
+
+.submenu a:hover {
+  background-color: rgba(var(--rgb-primary), 0.03);
+}

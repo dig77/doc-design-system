@@ -1,0 +1,37 @@
+<!-- <div>
+  <div (click)="toggle('1')">Intro</div>
+  <div *ngIf="isShown['1']">
+    <div>Branding</div>
+    <div>Intro</div>
+  </div>
+</div>
+<div>
+  <div (click)="toggle('2')">First Pages</div>
+  <div *ngIf="isShown['2']">
+    <div>
+      <a href="#">Company search</a>
+    </div>
+    <div>
+      <a href="#">Company Info</a>
+    </div>
+  </div>
+</div> -->
+
+<ul id="accordion" class="accordion" >
+  <li *ngFor="let menu of menus; let i = index" 
+    [class.active]="menu.active">
+    <a class="menu" (click)="toggle(i)" [routerLink]="menu.url" *ngIf="menu.mainLink">
+      {{ menu.name }}
+    </a>
+    <div class="menu" (click)="toggle(i)" *ngIf="!menu.mainLink">
+      {{ menu.name }}
+    </div>
+    <ul class="submenu" #submenu 
+      [style.height.px]="menu.active ? submenu.scrollHeight : 0">
+      <li *ngFor="let submenu of menu.submenu">
+        <a [routerLink]="submenu.url" >{{ submenu.name }}</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
