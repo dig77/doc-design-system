@@ -11,13 +11,14 @@ aside {
 }
 
 main {
-  padding: 0.5rem 1.5rem;
+  padding: 0 1.5rem;
 }
 
 /* sidenav */
 
 nav {
-  padding-top: 2.6em;
+  padding-top: 34px;
+  /* padding-top: 1.9em; */
 }
 
 #sidenav {
@@ -33,11 +34,12 @@ nav {
   touch-action: manipulation;
 }
 
+
 .app-name {
   display: block;
   text-decoration: none;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: rgba(var(--rgb-secondary) , .8);
   font-family: var(--alternative-font);
   font-weight: 700;
@@ -79,9 +81,7 @@ aside > div:focus {
   }
 
   nav {
-    background-color: #adadad;
-    color: #fff;
-    font-size: 1.5rem;
+    background-color: #EEEEEE;
   }
 
   #sidenav {

@@ -43,3 +43,9 @@ body {
 .is-hidden {
   display: none!important;
 }
+
+/* typography */
+
+h1 {
+  font-size: clamp(1.6rem, 5vw, 2rem)
+}

@@ -8,6 +8,7 @@ import { SearchAreaComponent } from './search-area/search-area.component';
 import { CompanyInfoComponent } from './company-info/company-info.component';
 import { IntroComponent } from './intro/intro.component';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

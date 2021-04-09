@@ -5,6 +5,7 @@ import { Config, Menu } from './menu/types';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  animations: []
 })
 export class AppComponent implements OnInit{
   openMenu: boolean;
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit{
       name: 'Branding',
       active: false,
       submenu: [
-        { name: 'Visual Language', url: '/search-area' },
+        { name: 'Visual Language', url: '#' },
         { name: 'Pallete', url: '#' }
       ],
     },
