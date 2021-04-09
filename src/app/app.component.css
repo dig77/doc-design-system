@@ -14,14 +14,6 @@ main {
   padding: 0.5rem 1.5rem;
 }
 
-main > header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-block-size: 3rem;
-  margin-block-end: 1rem;
-}
-
 /* sidenav */
 
 nav {
@@ -42,6 +34,8 @@ nav {
 }
 
 .app-name {
+  display: block;
+  text-decoration: none;
   text-align: center;
   font-size: 1.5rem;
   color: rgba(var(--rgb-secondary) , .8);
@@ -50,54 +44,6 @@ nav {
   letter-spacing: 1px;
 }
 
-
-/* hamburguer */
-
-.hamburger {
-  --size: 4rem;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  place-content: center;
-  padding: 1rem;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  margin-inline-start: -1rem;
-  block-size: var(--size);
-  inline-size: var(--size);
-  outline: none;
-  transition: border-color 0.25s ease, background-color 0.25s ease;
-}
-
-.hamburger:hover {
-  border-color: rgba(var(--rgb-secondary) / 50%);
-}
-
-.hamburger:focus {
-  border-color: rgba(var(--rgb-secondary) / 12%);
-  background: rgba(var(--rgb-secondary) / 10%);
-}
-
-.hamburger:hover svg > line {
-  stroke: var(--color-secondary);
-  stroke: rgba(var(--rgb-secondary));
-}
-
-.hamburger:active {
-  background: rgba(var(--rgb-secondary) / 20%);
-}
-
-.hamburger > svg {
-  width: 100%;
-}
-
-.hamburger > svg > line {
-  stroke: #e2e2e2;
-  stroke: #333;
-  stroke-width: 7px;
-  transition: stroke 0.25s ease;
-}
 
 /* intro */
 
@@ -163,7 +109,6 @@ aside > div:focus {
 }
 
 @media (min-width: 1200px) {
-  #sidenav-button,
   #sidenav-close {
     display: none;
   }
@@ -177,3 +122,5 @@ aside > div:focus {
     grid-template-columns: 1fr;
   }
 }
+
+

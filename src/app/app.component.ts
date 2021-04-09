@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Config, Menu } from './menu/types';
 
 @Component({
@@ -6,9 +6,13 @@ import { Config, Menu } from './menu/types';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   openMenu: boolean;
   title = 'doc-design-system';
+
+  ngOnInit() {
+
+  }
 
   // single open mode
   options: Config = { multi: false };
@@ -20,9 +24,8 @@ export class AppComponent {
       name: 'Branding',
       active: false,
       submenu: [
-        { name: 'Visual Language', url: '#' },
-        { name: 'Pallete', url: '#' },
-        { name: 'Typography', url: '#' },
+        { name: 'Visual Language', url: '/search-area' },
+        { name: 'Pallete', url: '#' }
       ],
     },
     {
@@ -31,8 +34,7 @@ export class AppComponent {
       name: 'Components',
       active: false,
       submenu: [
-        { name: 'Buttons', url: '#' },
-        { name: 'Tables', url: '#' }
+        { name: 'Buttons', url: '#' }
       ],
     },
     {
@@ -50,4 +52,8 @@ export class AppComponent {
       submenu: [],
     }
   ];
+
+  changeOpenMenu() {
+    this.openMenu = !this.openMenu;
+  }
 }

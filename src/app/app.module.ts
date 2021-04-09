@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { SearchAreaComponent } from './search-area/search-area.component';
 import { CompanyInfoComponent } from './company-info/company-info.component';
+import { IntroComponent } from './intro/intro.component';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     SearchAreaComponent,
-    CompanyInfoComponent
+    CompanyInfoComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

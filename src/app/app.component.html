@@ -1,38 +1,17 @@
 <div class="main-container">
   <aside id="sidenav" [ngClass]="{ 'is-open': openMenu }">
     <nav>
-      <div class="app-name"><span>Saphety</span><span>DOC</span></div>
+      <a class="app-name" routerLink="/intro"><span>Saphety</span><span>DOC</span></a>
       <app-menu [options]="options" [menus]="menus"></app-menu>
     </nav>
     <div
       id="sidenav-close"
       title="Close Menu"
       aria-label="Close Menu"
-      (click)="openMenu = !openMenu"
+      (click)="changeOpenMenu()"
     ></div>
   </aside>
   <main>
-    <header>
-      <a
-        id="sidenav-button"
-        class="hamburger"
-        title="Open Menu"
-        aria-label="Open Menu"
-        (click)="openMenu = !openMenu"
-      >
-        <svg
-          viewBox="0 0 50 40"
-          role="presentation"
-          focusable="false"
-          aria-label="trigram for heaven symbol"
-        >
-          <line x1="0" x2="100%" y1="10%" y2="10%"></line>
-          <line x1="0" x2="100%" y1="50%" y2="50%"></line>
-          <line x1="0" x2="100%" y1="90%" y2="90%"></line>
-        </svg>
-      </a>
-      <h1>Welcome</h1>
-    </header>
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet> 
   </main>
 </div>
