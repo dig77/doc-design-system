@@ -1,0 +1,58 @@
+<form novalidate>
+  <div class="is-search-bar" [ngClass]="expandable ? 'highlight': 'default'">
+    <div class="is-sb-expand" (click)="showExpandable()">
+      <span>Filters</span>
+      <span>
+        <i class="fal fa-chevron-down"></i>
+      </span>
+    </div>
+    <div class="is-sb-input">
+      <input type="search" placeholder="search companies" />
+    </div>
+    <div class="is-sb-submit" [ngClass]="expandable ? 'hide':'show'">
+      <button mat-flat-button color="primary" (click)="onClick();$event.preventDefault()">Search</button>
+    </div>
+  </div>
+  <div class="is-search-expandable" *ngIf="expandable" @expandable>
+    <div class="expandable-grid">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Saphety"  />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Location</mat-label>
+        <input matInput placeholder="Lisbon"  />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Type</mat-label>
+        <input matInput placeholder="Restricted"  />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Status</mat-label>
+        <input matInput placeholder="Active"  />
+      </mat-form-field>
+    </div>
+    <div class="expandable-actions">
+      <button mat-stroked-button color="accent" (click)="showExpandableExtra();$event.preventDefault()">More Filters</button>
+      <button mat-raised-button color="primary">Search</button>
+    </div>
+    <div class="expandable-extra-grid" *ngIf="expandableExtra" @expandable>
+        <mat-form-field class="example-full-width">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Number</mat-label>
+            <input matInput placeholder="" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Street</mat-label>
+            <input matInput placeholder="" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Country</mat-label>
+            <input matInput placeholder="" />
+          </mat-form-field>
+    </div>
+  </div>
+</form>

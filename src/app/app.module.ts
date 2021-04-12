@@ -9,6 +9,10 @@ import { CompanyInfoComponent } from './company-info/company-info.component';
 import { IntroComponent } from './intro/intro.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
+import { MaterialModule} from './material/material.module';
+import { EmptySearchComponent } from './shared/components/empty-search/empty-search.component';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +20,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MenuComponent,
     SearchAreaComponent,
     CompanyInfoComponent,
-    IntroComponent
+    IntroComponent,
+    SearchBarComponent,
+    EmptySearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

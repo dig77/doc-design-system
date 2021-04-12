@@ -1,4 +1,4 @@
-import {style, transition, animate, trigger, query, state,group} from '@angular/animations';
+import {style, transition, animate, trigger, query, state, group, keyframes, stagger} from '@angular/animations';
 
 export const introAnimationTrigger = trigger('introAnimation', [
     transition(':enter', [
@@ -47,6 +47,49 @@ export const closeMenuTrigger = trigger('closeMenu', [
         'border': '2px solid var(--color-secondary)'
     })),
     transition('default => clicked' , animate('500ms 500ms ease-out'))
-])
+]);
+
+export const showExpandableTrigger = trigger('expandable', [
+    transition(':enter', [
+        style({
+            height: 0, 
+            opacity: 0
+        }), group([
+            animate(500, style({height:'*'})),
+            animate(800, style({opacity: 0.5}))
+        ]),
+        animate('600ms ease-out', style({opacity:1}))
+        ]),
+        transition(':leave', [
+            style({
+                height: '*', 
+                opacity: 1
+            }), group([
+                animate('300ms ease-in', style({opacity: 0.1}))
+            ]),
+            animate(600, style({height:0,opacity:0}))
+        ])
+]);
+
+export const emptyElementTrigger = trigger('emptyElement', [
+    transition(':enter', [
+        style({
+            opacity:0,
+            transform: 'scale(.95)'
+        }),
+        animate('1000ms 300ms ease-out', style({opacity:1, transform: 'scale(1)'}))
+    ])
+]);
+
+export const classStagger = trigger('classStagger', [
+        transition('void => *', [
+            query('.child', style({opacity: 0, transform: 'translateX(-30px)'})),
+            query('.child', stagger('300ms', [
+                animate('500ms ease-in-out', style({opacity: 1, transform: 'translateX(0)'}))
+            ]))
+        ])
+    ]);
+
+
 
 

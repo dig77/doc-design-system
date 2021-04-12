@@ -15,7 +15,7 @@
   --rgb-primary: 2, 3, 3;
   --color-primary: #020303;
   --rgb-secondary: 0, 95, 249;
-  --color-secondary: rgb(0, 95, 249);
+  --color-secondary: #005ff9;
   --color-danger: #e53935;
   --color-success: #43a047;
 
@@ -44,8 +44,4 @@ body {
   display: none!important;
 }
 
-/* typography */
 
-h1 {
-  font-size: clamp(1.6rem, 5vw, 2rem)
-}

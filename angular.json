@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
+              "src/assets/css/tags.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/fontawesome/fontawesome.min.js",
+              "src/assets/fontawesome/light.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +124,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "doc-design-system"
 }

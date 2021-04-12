@@ -1,0 +1,118 @@
+:host {
+    display: flex;
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+.results-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.results.list-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    margin-top: 1.5em;
+}
+
+.results.list-view .results-card {
+    display: flex;
+    align-items: center;
+}
+
+.results.list-view .results-card .results-card-stack-tags {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+
+.results.list-view .results-card .results-card-stack-data {
+    order: 0;
+    flex-direction: row;
+}
+
+.results.list-view .results-card .results-card-stack-extra {
+    order: 0;
+    flex-direction: row;
+    display: flex;
+}
+
+.results.list-view .results-card .results-card-stack-extra > div {
+    padding: 0 2em;
+}
+
+.results.list-view .results-card .results-card-stack-extra .results-extra-data-2 {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+}
+
+.results.card-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 1.5rem;
+    margin-top: 1.5em;
+}
+
+.results-card {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.results-card-stack-tags {
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-card-stack-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 0;
+}
+
+.result-card-image {
+    width: 150px;
+}
+
+.result-card-name {
+    padding: 1em 0;
+    font-weight: 700;
+}
+
+.result-card-vat a {
+    color: rgba(var(--rgb-secondary), 1);
+    text-decoration: none;
+}
+
+.result-card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.results-extra-data-2 {
+    margin-top: 1.5em;
+    border-top: 1px solid rgba(var(--rgb-primary), .05);
+    padding-top: 1.5em;
+}
+
+@media (min-width:1600px) {
+    :host {
+        display: grid;
+        grid-template-columns: 60vw 1fr;
+        column-gap: 0;
+    }
+
+    :host > * {
+        grid-column: 1;
+    }
+
+}

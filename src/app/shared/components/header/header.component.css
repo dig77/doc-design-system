@@ -1,9 +1,18 @@
+:host {
+  display: flex;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-block-size: 3rem;
   margin-block-end: 1rem;
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-weight: 700;
 }
 
 /* hamburguer */
