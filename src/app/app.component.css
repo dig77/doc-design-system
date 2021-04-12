@@ -11,13 +11,14 @@ aside {
 }
 
 main {
-  padding: 0 1.5rem;
+  padding-left: clamp(1em, 5vw, 7em);
+  padding-right: clamp(1em, 5vw, 7em);
 }
 
 /* sidenav */
 
 nav {
-  padding-top: 34px;
+  padding-top: 36px;
   /* padding-top: 1.9em; */
 }
 
@@ -34,21 +35,25 @@ nav {
   touch-action: manipulation;
 }
 
-
 .app-name {
   display: block;
   text-decoration: none;
   text-align: center;
+  color: rgba(var(--rgb-secondary), 0.8);
   font-size: 1.2rem;
-  color: rgba(var(--rgb-secondary) , .8);
   font-family: var(--alternative-font);
-  font-weight: 700;
   letter-spacing: 1px;
 }
 
+.app-name span:nth-child(1) {
+  font-weight: 500;
+}
+
+.app-name span:nth-child(2) {
+  font-weight: 700;
+}
 
 /* intro */
-
 
 .image-container {
   width: 80%;
@@ -81,7 +86,7 @@ aside > div:focus {
   }
 
   nav {
-    background-color: #EEEEEE;
+    background-color: #eeeeee;
   }
 
   #sidenav {
@@ -122,5 +127,3 @@ aside > div:focus {
     grid-template-columns: 1fr;
   }
 }
-
-

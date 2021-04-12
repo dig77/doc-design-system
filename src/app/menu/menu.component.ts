@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
   @Input() options;
   @Input() menus: Menu[];
   config: Config;
+  marked: number;
 
   // isShown = {
   //   '1': false,
@@ -41,7 +42,10 @@ export class MenuComponent implements OnInit {
     }
 
     this.menus[index].active = !this.menus[index].active;
+    this.marked = -1;
   }
+
+ 
 
   // toggle(string): void {
   //   this.isShown[string] = !this.isShown[string];

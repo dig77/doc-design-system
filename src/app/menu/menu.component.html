@@ -19,7 +19,7 @@
 
 <ul id="accordion" class="accordion" >
   <li *ngFor="let menu of menus; let i = index" 
-    [class.active]="menu.active">
+    [class.active]="menu.active && marked === -1">
     <a class="menu" (click)="toggle(i)" [routerLink]="menu.url" *ngIf="menu.mainLink">
       {{ menu.name }}
     </a>
@@ -28,8 +28,8 @@
     </div>
     <ul class="submenu" #submenu 
       [style.height.px]="menu.active ? submenu.scrollHeight : 0">
-      <li *ngFor="let submenu of menu.submenu">
-        <a [routerLink]="submenu.url" >{{ submenu.name }}</a>
+      <li *ngFor="let submenu of menu.submenu; let j= index" [ngClass]="marked === j ? 'active': 'not-marked'">
+        <a [routerLink]="submenu.url" (click)="marked = j;" >{{ submenu.name }}</a>
       </li>
     </ul>
   </li>

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchAreaComponent implements OnInit {
 
+  teste = true;
+
   constructor() { }
 
   ngOnInit(): void {

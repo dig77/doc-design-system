@@ -1,7 +1,7 @@
 <div class="main-container">
   <aside id="sidenav" [ngClass]="{ 'is-open': openMenu }">
     <nav>
-      <a class="app-name" routerLink="/intro"><span>Saphety</span><span>DOC</span></a>
+      <a class="app-name" routerLink="/intro" ><span>Saphety</span><span>DOC</span></a>
       <app-menu [options]="options" [menus]="menus"></app-menu>
     </nav>
     <div
@@ -9,6 +9,7 @@
       title="Close Menu"
       aria-label="Close Menu"
       (click)="changeOpenMenu()"
+      [@closeMenu]="openMenu ? 'clicked':'default'"
     ></div>
   </aside>
   <main>

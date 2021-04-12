@@ -35,18 +35,18 @@ export const introAnimationTrigger = trigger('introAnimation', [
     ])
 ]);
 
-export const fadeSlideInLeft = trigger('fadeSlideInLeft', [
-	transition(':enter', [
-		style({ opacity: 0, transform: 'translateX(-20px)' }),
-		animate('1000ms 500ms', style({ opacity: 1, transform: 'translateX(0)' })),
-	])
-]);
-
-export const fadeSlideInDown = trigger('fadeSlideInDown', [
-	transition(':enter', [
-		style({ opacity: 0, transform: 'translateY(-20px)' }),
-		animate('1000ms 800ms', style({ opacity: 1, transform: 'translateX(0)' })),
-	])
-]);
+export const closeMenuTrigger = trigger('closeMenu', [
+    state('default', style({ 
+        'opacity': 0, 
+        'background-color': 'rgb(62 62 62 / 0%)',
+        'border': '2px solid transparent'
+    })),
+    state('clicked', style({ 
+        'opacity': 1,
+        'background-color': 'rgb(62 62 62 / 50%)', 
+        'border': '2px solid var(--color-secondary)'
+    })),
+    transition('default => clicked' , animate('500ms 500ms ease-out'))
+])
 
 

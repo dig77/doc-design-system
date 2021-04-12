@@ -1,63 +1,67 @@
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-block-size: 3rem;
-    margin-block-end: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-block-size: 3rem;
+  margin-block-end: 1rem;
 }
 
 /* hamburguer */
 
 .hamburger {
-    --size: 4rem;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    place-content: center;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    margin-inline-start: -1rem;
-    block-size: var(--size);
-    inline-size: var(--size);
-    outline: none;
-    transition: border-color 0.25s ease, background-color 0.25s ease;
-  }
-  
-  .hamburger:hover {
-    border-color: rgba(var(--rgb-secondary) / 50%);
-  }
-  
-  .hamburger:focus {
-    border-color: rgba(var(--rgb-secondary) / 12%);
-    background: rgba(var(--rgb-secondary) / 10%);
-  }
-  
-  .hamburger:hover svg > line {
-    stroke: var(--color-secondary);
-    stroke: rgba(var(--rgb-secondary));
-  }
-  
-  .hamburger:active {
-    background: rgba(var(--rgb-secondary) / 20%);
-  }
-  
-  .hamburger > svg {
-    width: 100%;
-  }
-  
-  .hamburger > svg > line {
-    stroke: #e2e2e2;
-    stroke: #333;
-    stroke-width: 7px;
-    transition: stroke 0.25s ease;
-  }
+  --size: 4rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  place-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  margin-inline-start: -1rem;
+  block-size: var(--size);
+  inline-size: var(--size);
+  outline: none;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
 
-  @media (min-width: 1200px) {
-    #sidenav-button,
-    #sidenav-close {
-      display: none;
-    }
-  
+.hamburger:hover {
+  border-color: rgba(var(--rgb-secondary), 0.5);
+}
+
+.hamburger:focus {
+  border-color: rgba(var(--rgb-secondary), 0.8);
+  background: rgba(var(--rgb-secondary), 0.2);
+}
+
+.hamburger.focus {
+  border-color: rgba(var(--rgb-secondary), 0.8);
+  background: rgba(var(--rgb-secondary), 0.2);
+}
+
+.hamburger:hover svg > line {
+  stroke: var(--color-secondary);
+  stroke: rgba(var(--rgb-secondary), 1);
+}
+
+.hamburger:active {
+  background: rgba(var(--rgb-secondary), 0.8);
+}
+
+.hamburger > svg {
+  width: 100%;
+}
+
+.hamburger > svg > line {
+  stroke: #e2e2e2;
+  stroke: rgba(var(--rgb-primary), 1);
+  stroke-width: 7px;
+  transition: stroke 0.25s ease;
+}
+
+@media (min-width: 1200px) {
+  #sidenav-button,
+  #sidenav-close {
+    display: none;
   }
+}

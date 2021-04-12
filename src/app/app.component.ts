@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { closeMenuTrigger } from './animations/animate';
 import { Config, Menu } from './menu/types';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations: []
+  animations: [closeMenuTrigger]
 })
 export class AppComponent implements OnInit{
   openMenu: boolean;
+  isCloseMenu = "default";
   title = 'doc-design-system';
 
   ngOnInit() {
-
   }
 
   // single open mode
@@ -25,8 +26,8 @@ export class AppComponent implements OnInit{
       name: 'Branding',
       active: false,
       submenu: [
-        { name: 'Visual Language', url: '#' },
-        { name: 'Pallete', url: '#' }
+        { name: 'Visual Language', url: '/search-area' },
+        { name: 'Pallete', url: '/search-area' }
       ],
     },
     {
@@ -35,7 +36,7 @@ export class AppComponent implements OnInit{
       name: 'Components',
       active: false,
       submenu: [
-        { name: 'Buttons', url: '#' }
+        { name: 'Buttons', url: '/search-area' }
       ],
     },
     {
@@ -56,5 +57,6 @@ export class AppComponent implements OnInit{
 
   changeOpenMenu() {
     this.openMenu = !this.openMenu;
+    this.isCloseMenu = "clicked";
   }
 }
