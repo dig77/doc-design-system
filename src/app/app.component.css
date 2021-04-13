@@ -11,8 +11,8 @@ aside {
 }
 
 main {
-  padding-left: clamp(1em, 5vw, 7em);
-  padding-right: clamp(1em, 5vw, 7em);
+  padding-left: clamp(1em, 3vw, 7em);
+  padding-right: clamp(1em, 3vw, 7em);
 }
 
 /* sidenav */

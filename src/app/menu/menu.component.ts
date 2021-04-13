@@ -13,15 +13,11 @@ export class MenuComponent implements OnInit {
   config: Config;
   marked: number;
 
-  // isShown = {
-  //   '1': false,
-  //   '2': false
-  // };
-
   constructor() { }
 
   ngOnInit(): void {
     this.config = this.mergeConfig(this.options);
+    this.marked = -1;
   }
 
   mergeConfig(options: Config) {
@@ -44,11 +40,5 @@ export class MenuComponent implements OnInit {
     this.menus[index].active = !this.menus[index].active;
     this.marked = -1;
   }
-
- 
-
-  // toggle(string): void {
-  //   this.isShown[string] = !this.isShown[string];
-  // }
 
 }

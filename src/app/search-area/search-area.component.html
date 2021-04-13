@@ -4,258 +4,54 @@
 
 <app-empty-search *ngIf="hideEmpty"></app-empty-search>
 
-<div class="results-area" *ngIf="!hideEmpty" @classStagger>
-  <div class="results-actions">
+<div class="loader" *ngIf="!hideEmpty && !hasResults" @simpleFade>
+  <div class="cell">
+    <div class="pl pl-kinetic"></div>
+    <div class="pl-name">Loading</div>
+  </div>
+</div>
+
+<div class="results-area" *ngIf="!hideEmpty && hasResults" @classStagger>
+  <div class="results-actions" [ngClass]="{sticky : isSticky}">
     <div>
       <button mat-stroked-button color="primary">Download</button>
     </div>
     <div>
+      <mat-paginator
+        [length]="100"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+      >
+      </mat-paginator>
+    </div>
+    <div>
       <mat-button-toggle-group #group="matButtonToggleGroup">
         <mat-button-toggle
-          value="left"
-          aria-label="Text align left"
+          value="grid"
+          aria-label="grid-view"
           (click)="changeView()"
-        >
-          <span><i class="fal fa-bars"></i></span>
-        </mat-button-toggle>
-        <mat-button-toggle
-          value="center"
-          aria-label="Text align center"
-          (click)="changeView()"
+          matTooltip="Grid View"
+          matTooltipPosition="above"
         >
           <span><i class="fal fa-grip-horizontal"></i></span>
+        </mat-button-toggle>
+        <mat-button-toggle
+          value="list"
+          aria-label="list-view"
+          (click)="changeView()"
+          matTooltip="List View"
+          matTooltipPosition="above"
+        >
+          <span><i class="fal fa-bars"></i></span>
         </mat-button-toggle>
       </mat-button-toggle-group>
     </div>
   </div>
   <div class="results" [ngClass]="isView ? 'card-view' : 'list-view'">
-    <div class="results-card child">
-      <div class="results-card-stack-tags">
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-      </div>
-      <div class="results-card-stack-data">
-        <div class="result-card-image">
-          <img
-            src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
-            alt=""
-          />
-        </div>
-        <div class="result-card-main-data">
-          <div class="result-card-name">Rip Curl</div>
-          <div class="result-card-vat">
-            <a href="">12345678998</a>
-          </div>
-        </div>
-      </div>
-      <div class="results-card-stack-extra">
-        <div class="results-extra-data-1">
-          <p>Lorem ipsum dolor sit amet</p>
-          <p>consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-        <div class="results-extra-data-2">
-          <p>Lorem ipsum dolor sit</p>
-          <p>Lorem ipsum dolor sit ametadipisicing</p>
-          <p>Lorem ipsum dolor adipisicing elit</p>
-        </div>
-      </div>
-    </div>
-    <div class="results-card child">
-      <div class="results-card-stack-tags">
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-      </div>
-      <div class="results-card-stack-data">
-        <div class="result-card-image">
-          <img
-            src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
-            alt=""
-          />
-        </div>
-        <div class="result-card-main-data">
-          <div class="result-card-name">Rip Curl</div>
-          <div class="result-card-vat">
-            <a href="">12345678998</a>
-          </div>
-        </div>
-      </div>
-      <div class="results-card-stack-extra">
-        <div class="results-extra-data-1">
-          <p>Lorem ipsum dolor sit amet</p>
-          <p>consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-        <div class="results-extra-data-2">
-          <p>Lorem ipsum dolor sit</p>
-          <p>Lorem ipsum dolor sit ametadipisicing</p>
-          <p>Lorem ipsum dolor adipisicing elit</p>
-        </div>
-      </div>
-    </div>
-    <div class="results-card child">
-      <div class="results-card-stack-tags">
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-      </div>
-      <div class="results-card-stack-data">
-        <div class="result-card-image">
-          <img
-            src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
-            alt=""
-          />
-        </div>
-        <div class="result-card-main-data">
-          <div class="result-card-name">Rip Curl</div>
-          <div class="result-card-vat">
-            <a href="">12345678998</a>
-          </div>
-        </div>
-      </div>
-      <div class="results-card-stack-extra">
-        <div class="results-extra-data-1">
-          <p>Lorem ipsum dolor sit amet</p>
-          <p>consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-        <div class="results-extra-data-2">
-          <p>Lorem ipsum dolor sit</p>
-          <p>Lorem ipsum dolor sit ametadipisicing</p>
-          <p>Lorem ipsum dolor adipisicing elit</p>
-        </div>
-      </div>
-    </div>
-    <div class="results-card child">
-      <div class="results-card-stack-tags">
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-      </div>
-      <div class="results-card-stack-data">
-        <div class="result-card-image">
-          <img
-            src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
-            alt=""
-          />
-        </div>
-        <div class="result-card-main-data">
-          <div class="result-card-name">Rip Curl</div>
-          <div class="result-card-vat">
-            <a href="">12345678998</a>
-          </div>
-        </div>
-      </div>
-      <div class="results-card-stack-extra">
-        <div class="results-extra-data-1">
-          <p>Lorem ipsum dolor sit amet</p>
-          <p>consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-        <div class="results-extra-data-2">
-          <p>Lorem ipsum dolor sit</p>
-          <p>Lorem ipsum dolor sit ametadipisicing</p>
-          <p>Lorem ipsum dolor adipisicing elit</p>
-        </div>
-      </div>
-    </div>
-    <div class="results-card child">
-      <div class="results-card-stack-tags">
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-      </div>
-      <div class="results-card-stack-data">
-        <div class="result-card-image">
-          <img
-            src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
-            alt=""
-          />
-        </div>
-        <div class="result-card-main-data">
-          <div class="result-card-name">Rip Curl</div>
-          <div class="result-card-vat">
-            <a href="">12345678998</a>
-          </div>
-        </div>
-      </div>
-      <div class="results-card-stack-extra">
-        <div class="results-extra-data-1">
-          <p>Lorem ipsum dolor sit amet</p>
-          <p>consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-        <div class="results-extra-data-2">
-          <p>Lorem ipsum dolor sit</p>
-          <p>Lorem ipsum dolor sit ametadipisicing</p>
-          <p>Lorem ipsum dolor adipisicing elit</p>
-        </div>
-      </div>
-    </div>
-    <div class="results-card child">
-      <div class="results-card-stack-tags">
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-        <div class="tags has-addons">
-          <span class="tag">Package</span>
-          <span class="tag is-primary">Bulma</span>
-        </div>
-      </div>
-      <div class="results-card-stack-data">
-        <div class="result-card-image">
-          <img
-            src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
-            alt=""
-          />
-        </div>
-        <div class="result-card-main-data">
-          <div class="result-card-name">Rip Curl</div>
-          <div class="result-card-vat">
-            <a href="">12345678998</a>
-          </div>
-        </div>
-      </div>
-      <div class="results-card-stack-extra">
-        <div class="results-extra-data-1">
-          <p>Lorem ipsum dolor sit amet</p>
-          <p>consectetur adipisicing elit</p>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
-        </div>
-        <div class="results-extra-data-2">
-          <p>Lorem ipsum dolor sit</p>
-          <p>Lorem ipsum dolor sit ametadipisicing</p>
-          <p>Lorem ipsum dolor adipisicing elit</p>
-        </div>
-      </div>
-    </div>
+    <app-result-card
+      *ngFor="let result of results"
+      [result]="result"
+      [ngClass]="{ listed: !isView, grid: isView }"
+    ></app-result-card>
   </div>
 </div>

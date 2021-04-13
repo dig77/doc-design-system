@@ -21,13 +21,11 @@ export class AppComponent implements OnInit{
 
   menus: Menu[] = [
     {
-      mainLink: false,
-      url: '',
-      name: 'Branding',
-      active: false,
+      mainLink: true,
+      url: '/intro',
+      name: 'Home',
+      active: true,
       submenu: [
-        { name: 'Visual Language', url: '/search-area' },
-        { name: 'Pallete', url: '/search-area' }
       ],
     },
     {
@@ -36,7 +34,9 @@ export class AppComponent implements OnInit{
       name: 'Components',
       active: false,
       submenu: [
-        { name: 'Buttons', url: '/search-area' }
+        { name: 'Buttons', url: '#' },
+        { name: 'Table', url: '#' },
+        { name: 'Empty Elements', url: '#' }
       ],
     },
     {
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit{
     { 
       mainLink: true,
       url: '/company-info',
-      name: 'Company Info',
+      name: 'Company Details',
       active: false,
       submenu: [],
     }

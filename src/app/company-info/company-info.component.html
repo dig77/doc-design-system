@@ -1,1 +1,163 @@
-<app-header [title]="'Company Info'"></app-header>
+<app-header [title]="'Company Details'"></app-header>
+<div class="company-header">
+  <div class="is-company">
+    <div class="company-image">
+      <img
+        src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
+        alt="company logo"
+      />
+    </div>
+    <div class="company-status">
+      <span class="tag is-primary">Active</span>
+    </div>
+  </div>
+  <div class="is-company-data">
+    <div class="company-name">Company A</div>
+    <div class="company-user-email">usertest@company.com</div>
+    <div class="company-action">
+      <button mat-raised-button color="primary" [ngClass]="{hide:showActions}" (click)="toggleActions()">View Company Actions</button>
+      <button mat-raised-button color="accent">Edit</button>
+    </div>
+  </div>
+</div>
+<div class="company-main-details">
+  <div class="is-card">
+    <div class="company-details">
+      <div class="is-card-header">
+        <h2>Details</h2>
+      </div>
+      <div class="is-card-content">
+        <div class="company-details-grid">
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Saphety" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Lisbon" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Restricted" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Status</mat-label>
+            <input matInput placeholder="Active" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Saphety" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Lisbon" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Restricted" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Status</mat-label>
+            <input matInput placeholder="Active" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Saphety" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Lisbon" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Restricted" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Status</mat-label>
+            <input matInput placeholder="Active" />
+          </mat-form-field>
+        </div>
+        <div class="company-details-metadata">
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-light">Creation Date</span>
+              <span class="tag is-primary">13/04/2021 13:54:13</span>
+            </div>
+          </div>
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-light">Type</span>
+              <span class="tag is-warning">restricted</span>
+            </div>
+          </div>
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag is-light">Author</span>
+              <span class="tag is-info">JPR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="company-partners">
+      <div class="is-card-header" (click)="toggle('partners')">
+        <h2>Data Partners</h2>
+        <span [ngClass]="{ 'fa-rotate-180': isShown['partners'] }"
+          ><i class="fal fa-chevron-down"></i
+        ></span>
+      </div>
+      <div class="is-card-content" *ngIf="isShown['partners']" @expandable>
+        <div class="company-partners-grid">
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Saphety" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Lisbon" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Restricted" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Status</mat-label>
+            <input matInput placeholder="Active" />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="company-account-type">
+      <div class="is-card-header" (click)="toggle('type')">
+        <h2>Account type</h2>
+        <span [ngClass]="{ 'fa-rotate-180': isShown['type'] }"
+          ><i class="fal fa-chevron-down"></i
+        ></span>
+      </div>
+      <div class="is-card-content" *ngIf="isShown['type']" @expandable>
+        <div class="company-account-type-grid">
+          <mat-form-field class="example-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Saphety" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput placeholder="Lisbon" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="actions-wrapper" *ngIf="showActions" @classStagger>
+    <div class="close-actions child">
+        <button mat-raised-button color="primary" (click)="toggleActions()">close Actions</button>
+    </div>
+    <div class="actions-list">
+        <app-company-actions *ngFor="let action of actions" [action]="action" class="child"></app-company-actions>
+    </div>
+</div>
+

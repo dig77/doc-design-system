@@ -12,6 +12,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
 import { MaterialModule} from './material/material.module';
 import { EmptySearchComponent } from './shared/components/empty-search/empty-search.component';
+import { ResultCardComponent } from './search-area/result-card/result-card.component';
+import { CompanyActionsComponent } from './company-info/company-actions/company-actions.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { EmptySearchComponent } from './shared/components/empty-search/empty-sea
     CompanyInfoComponent,
     IntroComponent,
     SearchBarComponent,
-    EmptySearchComponent
+    EmptySearchComponent,
+    ResultCardComponent,
+    CompanyActionsComponent
   ],
   imports: [
     BrowserModule,

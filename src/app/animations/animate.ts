@@ -82,13 +82,32 @@ export const emptyElementTrigger = trigger('emptyElement', [
 ]);
 
 export const classStagger = trigger('classStagger', [
-        transition('void => *', [
-            query('.child', style({opacity: 0, transform: 'translateX(-30px)'})),
-            query('.child', stagger('300ms', [
-                animate('500ms ease-in-out', style({opacity: 1, transform: 'translateX(0)'}))
-            ]))
-        ])
-    ]);
+    transition('void => *', [
+        query('.child', style({opacity: 0, transform: 'translateX(-30px)'})),
+        query('.child', stagger('300ms', [
+            animate('500ms ease-in-out', style({opacity: 1, transform: 'translateX(0)'}))
+        ]))
+    ])
+]);
+
+export const simpleFade = trigger('simpleFade', [
+    transition('void => *', [
+        style({
+            opacity:0
+        }), 
+        animate('500ms ease-in', style({
+            opacity:1
+        }))
+    ]),
+    transition('* => void', [
+        style({
+            opacity:1
+        }), 
+        animate('300ms ease-out', style({
+            opacity:0
+        }))
+    ])
+])
 
 
 
