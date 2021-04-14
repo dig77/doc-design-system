@@ -61,10 +61,16 @@ body {
 /* cards */ 
 
 .is-card {
-  padding: 2em;
+  padding: 1em;
   background-color:var(--card-bg);
   border-radius: var(--br-lg);
   box-shadow: var(--shadow);
+}
+
+@media (min-width: 48em) {
+  .is-card {
+    padding: 2em;
+  }
 }
 
 .is-card h2 {

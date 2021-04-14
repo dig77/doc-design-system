@@ -1,4 +1,4 @@
-<div class="container" [ngStyle]="{'padding-right': showActions ? '0' :'clamp(1em, 3vw, 7em)'}">
+<div class="container" [ngClass]="{aside:showActions}">
   <app-header [title]="'Company Details'"></app-header>
   <div class="company-header">
     <div class="is-company">

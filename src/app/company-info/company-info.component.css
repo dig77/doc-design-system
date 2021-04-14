@@ -1,6 +1,6 @@
 .container {
-  padding-left: clamp(1em, 4vw, 7em);
-  padding-right: clamp(1em, 4vw, 7em);
+  display: flex;
+  flex-direction: column;
 }
 
 .company-header {
@@ -18,11 +18,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 250px;
+  max-width: inherit;
 }
 
 .company-image {
-  width: 250px;
+  width: 200px;
 }
 
 .company-name {
@@ -45,22 +45,28 @@
 .is-company-data {
   display: flex;
   flex-direction: column;
-  padding-left: 2em;
-  padding: 0 3em;
+  padding: 1.5em 0;
   justify-content: center;
+  align-items: center;
 }
 
 .company-action {
   margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .company-action button {
-  margin-right: 1.5em;
+  margin-right: 0;
+  margin-bottom: 1em;
 }
 
 .company-main-details {
   margin-top: 3em;
   margin-bottom: 5em;
+  order: 1;
 }
 
 .company-details-grid,
@@ -75,6 +81,11 @@
   display: flex;
   margin-top: 2em;
   justify-content: flex-end;
+  flex-direction: column;
+}
+
+.company-details-metadata .tags {
+  flex-wrap: nowrap;
 }
 
 .company-details-metadata > div {
@@ -119,10 +130,58 @@
 
 .actions-wrapper {
   background-color: rgba(var(--rgb-primary), 0.025);
-  padding: 0 1.5em;
+  padding: 0;
+  order: 0;
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 48em) {
+  .container {
+    flex-direction: column;
+  }
+
+  .company-image {
+    width: 250px;
+  }
+
+  .company-details-metadata {
+    flex-direction: row;
+  }
+
+  .company-details-metadata .tags {
+    flex-wrap: wrap;
+  }
+
+  .is-company-data {
+    padding: 0 3em;
+    align-items: flex-start;
+  }
+
+  .company-action {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .company-action button {
+    margin-right: 1.5em;
+  }
+
+  .is-company {
+    max-width: 250px;
+  }
+
+  .container.aside {
+    padding-right: clamp(1.5em, 4vw, 7em);
+  }
+
+  .actions-wrapper {
+    padding: 0 1.5em;
+  }
+}
+
+@media (min-width: 120em) {
   .container {
     display: grid;
     grid-template-columns: 60vw 1fr;
@@ -137,5 +196,9 @@
     grid-column: 2;
     grid-row: 1;
     grid-row-end: 4;
+  }
+
+  .container.aside {
+    padding-right: 0;
   }
 }
