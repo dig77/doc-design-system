@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { classStagger, showExpandableTrigger } from '../animations/animate';
 import { AppComponent } from '../app.component';
 
@@ -24,6 +24,7 @@ export class CompanyInfoComponent implements OnInit {
   ]
 
   showActions: boolean = false;
+
 
   constructor(
     private appComponent: AppComponent

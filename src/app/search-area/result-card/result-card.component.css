@@ -1,7 +1,6 @@
-
-
 :host(.listed) .results-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   animation: fadeIn ease 1s;
 }
@@ -16,14 +15,14 @@
 
 :host(.listed) .results-card .results-card-stack-data {
   order: 0;
-  flex-direction: row;
+  flex-direction: column;
   padding: 0;
   align-items: center;
 }
 
 :host(.listed) .results-card .results-card-stack-extra {
   order: 0;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
 }
 
@@ -43,7 +42,7 @@
 
 .results-card {
   background-color: #fff;
-  padding: 2em;
+  padding: 1em;
   border-radius: 5px;
   box-shadow: var(--shadow);
 }
@@ -111,5 +110,23 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@media (min-width: 48em) {
+  .results-card {
+    padding: 2em;
+  }
+
+  :host(.listed) .results-card {
+    flex-direction: row
+  }
+
+  :host(.listed) .results-card .results-card-stack-extra {
+    flex-direction: row;
+  }
+
+  :host(.listed) .results-card .results-card-stack-data {
+    flex-direction: row;
   }
 }

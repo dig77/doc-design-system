@@ -1,17 +1,22 @@
-:host {
+/* :host {
   display: flex;
   width: 100%;
   margin-bottom: 4em;
-}
+} */
 
 .results-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  margin-top: 1em;
+  margin-top: 2.5em;
   position: sticky;
   top: 0;
+  flex-direction: column;
+}
+
+.results-actions > div {
+  margin-bottom: 1.5em;
 }
 
 .results-actions.sticky {
@@ -29,7 +34,7 @@
 
 .results.card-view {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 1.5rem;
   margin-top: 1.5em;
 }
@@ -113,14 +118,37 @@
   background: transparent;
 }
 
+.mat-paginator .mat-paginator-container {
+  justify-content: center;
+}
+
+@media (min-width: 48em) {
+  .results-actions > div {
+    margin-bottom: 0;
+  }
+
+  .results-actions {
+    flex-direction: row;
+    margin-top: 1em;
+  }
+
+  .mat-paginator-container {
+    justify-content: flex-end;
+  }
+
+  .results.card-view {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+}
+
 @media (min-width: 1900px) {
-  :host {
+  .container {
     display: grid;
     grid-template-columns: 60vw 1fr;
     column-gap: 0;
   }
 
-  :host > * {
+  .container > * {
     grid-column: 1;
   }
 }

@@ -53,6 +53,11 @@ body {
   display: none !important;
 }
 
+.container {
+  padding-left: clamp(1.5em, 4vw, 7em);
+  padding-right: clamp(1.5em, 4vw, 7em);
+}
+
 /* cards */ 
 
 .is-card {
@@ -66,4 +71,16 @@ body {
   font-size: 1.3rem;
   font-weight: 600;
   color: rgba(var(--rgb-primary), .7);
+}
+
+/* overrides */
+
+.mat-paginator .mat-paginator-container {
+  justify-content: center;
+}
+
+@media (min-width: 48em) {
+  .mat-paginator .mat-paginator-container {
+    justify-content: flex-end;
+  }
 }

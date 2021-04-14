@@ -10,10 +10,6 @@ aside {
   min-width: 20rem;
 }
 
-main {
-  padding-left: clamp(1em, 3vw, 7em);
-  padding-right: clamp(1em, 3vw, 7em);
-}
 
 /* sidenav */
 
@@ -104,6 +100,7 @@ aside > div:focus {
     will-change: transform;
     transition: transform var(--duration) var(--easeOutExpo),
       visibility 0s linear var(--duration);
+      z-index: 1;
   }
 
   #sidenav.is-open {

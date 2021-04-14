@@ -50,6 +50,7 @@
 .submenu a {
   display: block;
   color: var(--font-color-primary);
+  font-weight: 500;
   text-decoration: none;
   padding: 0.8em 1em;
   border-radius: 5px;

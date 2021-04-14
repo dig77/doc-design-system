@@ -1,3 +1,8 @@
+.container {
+  padding-left: clamp(1em, 4vw, 7em);
+  padding-right: clamp(1em, 4vw, 7em);
+}
+
 .company-header {
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +105,7 @@
 }
 
 .close-actions {
-  margin-top: 11vh;
+  margin-top: 1.7em;
   margin-bottom: 1.5em;
 }
 
@@ -112,20 +117,25 @@
   display: none;
 }
 
+.actions-wrapper {
+  background-color: rgba(var(--rgb-primary), 0.025);
+  padding: 0 1.5em;
+}
+
 @media (min-width: 1900px) {
-  :host {
+  .container {
     display: grid;
     grid-template-columns: 60vw 1fr;
     column-gap: 2em;
   }
 
-  :host > * {
+  .container > * {
     grid-column: 1;
   }
 
-  :host .actions-wrapper {
+  .container .actions-wrapper {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
     grid-row-end: 4;
   }
 }

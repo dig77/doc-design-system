@@ -1,5 +1,6 @@
 :host {
-  display: flex;
+  display: grid;
+  width: 100%;
 }
 
 header {
@@ -11,6 +12,7 @@ header {
 }
 
 header h1 {
+  padding-top: .7em;
   font-size: clamp(1.6rem, 5vw, 2rem);
   font-weight: 700;
 }

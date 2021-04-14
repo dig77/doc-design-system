@@ -1,57 +1,59 @@
-<app-header [title]="'Search Area'"></app-header>
-
-<app-search-bar (hideClick)="showResults()"></app-search-bar>
-
-<app-empty-search *ngIf="hideEmpty"></app-empty-search>
-
-<div class="loader" *ngIf="!hideEmpty && !hasResults" @simpleFade>
-  <div class="cell">
-    <div class="pl pl-kinetic"></div>
-    <div class="pl-name">Loading</div>
-  </div>
-</div>
-
-<div class="results-area" *ngIf="!hideEmpty && hasResults" @classStagger>
-  <div class="results-actions" [ngClass]="{sticky : isSticky}">
-    <div>
-      <button mat-stroked-button color="primary">Download</button>
-    </div>
-    <div>
-      <mat-paginator
-        [length]="100"
-        [pageSize]="10"
-        [pageSizeOptions]="[5, 10, 25, 100]"
-      >
-      </mat-paginator>
-    </div>
-    <div>
-      <mat-button-toggle-group #group="matButtonToggleGroup">
-        <mat-button-toggle
-          value="grid"
-          aria-label="grid-view"
-          (click)="changeView()"
-          matTooltip="Grid View"
-          matTooltipPosition="above"
-        >
-          <span><i class="fal fa-grip-horizontal"></i></span>
-        </mat-button-toggle>
-        <mat-button-toggle
-          value="list"
-          aria-label="list-view"
-          (click)="changeView()"
-          matTooltip="List View"
-          matTooltipPosition="above"
-        >
-          <span><i class="fal fa-bars"></i></span>
-        </mat-button-toggle>
-      </mat-button-toggle-group>
+<div class="container">
+  <app-header [title]="'Search Area'"></app-header>
+  
+  <app-search-bar (hideClick)="showResults()"></app-search-bar>
+  
+  <app-empty-search *ngIf="hideEmpty"></app-empty-search>
+  
+  <div class="loader" *ngIf="!hideEmpty && !hasResults" @simpleFade>
+    <div class="cell">
+      <div class="pl pl-kinetic"></div>
+      <div class="pl-name">Loading</div>
     </div>
   </div>
-  <div class="results" [ngClass]="isView ? 'card-view' : 'list-view'">
-    <app-result-card
-      *ngFor="let result of results"
-      [result]="result"
-      [ngClass]="{ listed: !isView, grid: isView }"
-    ></app-result-card>
+  
+  <div class="results-area" *ngIf="!hideEmpty && hasResults" @classStagger>
+    <div class="results-actions" [ngClass]="{sticky : isSticky}">
+      <div>
+        <button mat-stroked-button color="primary">Download</button>
+      </div>
+      <div>
+        <mat-paginator
+          [length]="100"
+          [pageSize]="10"
+          [pageSizeOptions]="[5, 10, 25, 100]"
+        >
+        </mat-paginator>
+      </div>
+      <div>
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+          <mat-button-toggle
+            value="grid"
+            aria-label="grid-view"
+            (click)="changeView()"
+            matTooltip="Grid View"
+            matTooltipPosition="above"
+          >
+            <span><i class="fal fa-grip-horizontal"></i></span>
+          </mat-button-toggle>
+          <mat-button-toggle
+            value="list"
+            aria-label="list-view"
+            (click)="changeView()"
+            matTooltip="List View"
+            matTooltipPosition="above"
+          >
+            <span><i class="fal fa-bars"></i></span>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </div>
+    <div class="results" [ngClass]="isView ? 'card-view' : 'list-view'">
+      <app-result-card
+        *ngFor="let result of results"
+        [result]="result"
+        [ngClass]="{ listed: !isView, grid: isView }"
+      ></app-result-card>
+    </div>
   </div>
 </div>
