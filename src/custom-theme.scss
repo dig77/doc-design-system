@@ -40,6 +40,15 @@ $doc-design-system-theme: mat-light-theme((
   )
 ));
 
+.dark {
+  $dt-primary: mat-palette($mat-purple, 400);
+  $dt-accent: mat-palette($mat-teal, 400);
+  $dt-warn: mat-palette($mat-red, 700);
+
+  $dark-theme: mat-light-theme($dt-primary, $dt-accent,$dt-warn);
+  @include angular-material-theme($dark-theme);
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.

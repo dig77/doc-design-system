@@ -14,6 +14,8 @@ import { MaterialModule} from './material/material.module';
 import { EmptySearchComponent } from './shared/components/empty-search/empty-search.component';
 import { ResultCardComponent } from './search-area/result-card/result-card.component';
 import { CompanyActionsComponent } from './company-info/company-actions/company-actions.component';
+import { CommonModule } from '@angular/common';
+import { ThemeToggler } from './shared/services/theme-toggle.service';
 
 
 @NgModule({
@@ -33,9 +35,10 @@ import { CompanyActionsComponent } from './company-info/company-actions/company-
     AppRoutingModule,
     CoreModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [ThemeToggler],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

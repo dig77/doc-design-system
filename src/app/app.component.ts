@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { closeMenuTrigger } from './animations/animate';
 import { Config, Menu } from './menu/types';
+import { ThemeToggler, Theme} from './shared/services/theme-toggle.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,8 @@ export class AppComponent implements OnInit{
   openMenu: boolean;
   isCloseMenu = "default";
   title = 'doc-design-system';
+
+  constructor(private tt: ThemeToggler) {}
 
   ngOnInit() {
   }
@@ -58,5 +61,9 @@ export class AppComponent implements OnInit{
   changeOpenMenu() {
     this.openMenu = !this.openMenu;
     this.isCloseMenu = "clicked";
+  }
+
+  switchTheme(newTheme: Theme): void {
+    this.tt.switchTheme(newTheme);
   }
 }

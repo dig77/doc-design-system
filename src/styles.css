@@ -36,6 +36,39 @@
   --br-lg: 20px;
 }
 
+.dark {
+  /* background */
+  --bg-color: #21212a;
+  /* typography */
+  --main-font: "Quicksand", sans-serif;
+  --alternative-font: "Bitter", serif;
+  --font-color-primary: #fff;
+
+  /* colors */
+  --rgb-primary: 171, 71, 188;
+  --color-primary: #ab47bc;
+  --rgb-secondary: 0, 198, 195;
+  --color-secondary: #00c6c3;
+  --color-danger: #e53935;
+  --color-success: #43a047;
+
+  /* shadows */
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* cards */
+  --card-bg: #353740;
+
+  /* border-radius */
+  --br-xs: 5px;
+  --br-sm: 10px;
+  --br-md: 15px;
+  --br-lg: 20px;
+}
+
 body,
 html {
   height: 100%;
@@ -58,11 +91,11 @@ body {
   padding-right: clamp(1.5em, 4vw, 7em);
 }
 
-/* cards */ 
+/* cards */
 
 .is-card {
   padding: 1em;
-  background-color:var(--card-bg);
+  background-color: var(--card-bg);
   border-radius: var(--br-lg);
   box-shadow: var(--shadow);
 }
@@ -76,7 +109,7 @@ body {
 .is-card h2 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: rgba(var(--rgb-primary), .7);
+  color: rgba(var(--rgb-primary), 0.8);
 }
 
 /* overrides */
@@ -89,4 +122,63 @@ body {
   .mat-paginator .mat-paginator-container {
     justify-content: flex-end;
   }
+}
+
+/* dark theme overrides */
+
+.dark .main-container main .mat-form-field-label {
+  color: whitesmoke;
+}
+
+.dark .main-container main .mat-form-field-underline {
+  background-color: whitesmoke;
+}
+
+.dark .main-container .company-name {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 0.3em;
+  color: rgba(var(--rgb-primary), 0.9);
+}
+
+.dark .main-container .mat-button-toggle-appearance-standard {
+  background: var(--card-bg);
+  color: var(--font-color-primary);
+}
+
+.dark .main-container .mat-button-toggle-checked {
+  background-color: var(--color-primary);
+}
+
+.dark .main-container .empty-area-img {
+  filter: hue-rotate(45deg);
+  opacity: 0.4;
+}
+
+.dark .main-container .empty-area {
+  background-color: rgba(var(--rgb-primary), 0.02);
+}
+
+.dark .main-container .is-sb-expand {
+  background-color: rgba(var(--rgb-secondary), 0.2);
+}
+
+.dark .main-container .mat-paginator, .dark .main-container .mat-paginator-page-size .mat-select-trigger, .dark .main-container .mat-select-value, .dark .main-container .mat-icon-button.mat-button-disabled.mat-button-disabled, .dark .main-container .mat-select-arrow  {
+  color: whitesmoke;
+}
+
+.dark .main-container .image-container {
+  background-blend-mode: multiply;
+}
+
+.dark .main-container main .intro-el-1 .intro-el-container {
+  background-color: var(--color-primary);
+}
+
+.dark .main-container .actions-wrapper {
+  background-color: rgba(var(--rgb-primary), .05)
+}
+
+.dark .main-container .company-action-description {
+  color:rgba(var(--rgb-primary), .9);
 }

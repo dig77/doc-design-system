@@ -2,7 +2,7 @@
   <div class="is-search-bar" [ngClass]="expandable ? 'highlight': 'default'">
     <div class="is-sb-expand" (click)="showExpandable()">
       <span>Filters</span>
-      <span>
+      <span [ngClass]="{rotate:expandable}">
         <i class="fal fa-chevron-down"></i>
       </span>
     </div>

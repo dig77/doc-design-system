@@ -10,7 +10,6 @@ aside {
   min-width: 20rem;
 }
 
-
 /* sidenav */
 
 nav {
@@ -62,16 +61,15 @@ nav {
   object-fit: contain;
 }
 
-/* aside > div {
-  outline-offset: -1px;
-  outline: 1px solid transparent;
+.sidenav-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-aside > div:focus {
-  outline-color: #ff1492;
-  outline-color: hsl(var(--rgb-secondary));
-  transition: outline-color 0.25s ease;
-} */
+.theme-toggler {
+  margin-bottom:1.5em;
+}
 
 /* media queries */
 
@@ -100,7 +98,7 @@ aside > div:focus {
     will-change: transform;
     transition: transform var(--duration) var(--easeOutExpo),
       visibility 0s linear var(--duration);
-      z-index: 1;
+    z-index: 1;
   }
 
   #sidenav.is-open {
@@ -122,5 +120,6 @@ aside > div:focus {
 
   #sidenav {
     grid-template-columns: 1fr;
+    height: 100vh;
   }
 }
