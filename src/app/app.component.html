@@ -1,26 +1,28 @@
 <div class="main-container">
   <aside id="sidenav" [ngClass]="{ 'is-open': openMenu }">
-    <div class="sidenav-top">
-      <nav>
-        <a class="app-name" routerLink="/intro" ><span>Saphety</span><span>DOC</span></a>
-        <app-menu [options]="options" [menus]="menus"></app-menu>
-      </nav>
-      <div
+    <div class="sidenav-wrap">
+      <div class="sidenav-top">
+        <nav>
+          <a class="app-name" routerLink="/intro" ><span>Saphety</span><span>DOC</span></a>
+          <app-menu [options]="options" [menus]="menus"></app-menu>
+        </nav>
+      </div>
+      <div class="sidenav-bottom">
+        <div class="theme-toggler">
+          <mat-button-toggle-group aria-label="Theme Toggler">
+            <mat-button-toggle (click)="switchTheme('light')">Light mode</mat-button-toggle>
+            <mat-button-toggle (click)="switchTheme('dark')">Dark mode</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+    </div> 
+    <div
         id="sidenav-close"
         title="Close Menu"
         aria-label="Close Menu"
         (click)="changeOpenMenu()"
         [@closeMenu]="openMenu ? 'clicked':'default'"
       ></div>
-    </div>
-    <div class="sidenav-bottom">
-      <div class="theme-toggler">
-        <mat-button-toggle-group aria-label="Theme Toggler">
-          <mat-button-toggle (click)="switchTheme('light')">Light mode</mat-button-toggle>
-          <mat-button-toggle (click)="switchTheme('dark')">Dark mode</mat-button-toggle>
-        </mat-button-toggle-group>
-      </div>
-    </div>
   </aside>
   <main>
     <router-outlet></router-outlet> 

@@ -21,7 +21,7 @@ nav {
   --easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
   --duration: 0.6s;
   display: grid;
-  grid-template-columns: [nav] 2fr [escape] 1fr;
+  grid-template-columns: [one] 2fr [two] 1fr;
 }
 
 #sidenav-button,
@@ -61,6 +61,13 @@ nav {
   object-fit: contain;
 }
 
+.sidenav-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--mobile-nav-bg);
+}
+
 .sidenav-bottom {
   display: flex;
   justify-content: center;
@@ -68,7 +75,7 @@ nav {
 }
 
 .theme-toggler {
-  margin-bottom:1.5em;
+  margin-bottom: 1.5em;
 }
 
 /* media queries */
@@ -80,7 +87,7 @@ nav {
   }
 
   nav {
-    background-color: #eeeeee;
+    background-color: var(--mobile-nav-bg);
   }
 
   #sidenav {
@@ -121,5 +128,9 @@ nav {
   #sidenav {
     grid-template-columns: 1fr;
     height: 100vh;
+  }
+
+  .sidenav-wrap {
+    background-color: transparent;
   }
 }

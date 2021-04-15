@@ -6,6 +6,8 @@
 :root {
   /* background */
   --bg-color: #f7f8fa;
+  --mobile-nav-bg: #eeeeee;
+
   /* typography */
   --main-font: "Quicksand", sans-serif;
   --alternative-font: "Bitter", serif;
@@ -39,6 +41,8 @@
 .dark {
   /* background */
   --bg-color: #21212a;
+  --mobile-nav-bg: #353740;
+
   /* typography */
   --main-font: "Quicksand", sans-serif;
   --alternative-font: "Bitter", serif;
@@ -114,6 +118,10 @@ body {
 
 /* overrides */
 
+app-intro header h1 {
+  color: var(--bg-color);
+}
+
 .mat-paginator .mat-paginator-container {
   justify-content: center;
 }
@@ -124,7 +132,7 @@ body {
   }
 }
 
-/* dark theme overrides */
+/* dark theme styles */
 
 .dark .main-container main .mat-form-field-label {
   color: whitesmoke;
@@ -163,7 +171,11 @@ body {
   background-color: rgba(var(--rgb-secondary), 0.2);
 }
 
-.dark .main-container .mat-paginator, .dark .main-container .mat-paginator-page-size .mat-select-trigger, .dark .main-container .mat-select-value, .dark .main-container .mat-icon-button.mat-button-disabled.mat-button-disabled, .dark .main-container .mat-select-arrow  {
+.dark .main-container .mat-paginator,
+.dark .main-container .mat-paginator-page-size .mat-select-trigger,
+.dark .main-container .mat-select-value,
+.dark .main-container .mat-icon-button.mat-button-disabled.mat-button-disabled,
+.dark .main-container .mat-select-arrow {
   color: whitesmoke;
 }
 
@@ -176,9 +188,9 @@ body {
 }
 
 .dark .main-container .actions-wrapper {
-  background-color: rgba(var(--rgb-primary), .05)
+  background-color: rgba(var(--rgb-primary), 0.05);
 }
 
 .dark .main-container .company-action-description {
-  color:rgba(var(--rgb-primary), .9);
+  color: rgba(var(--rgb-primary), 0.9);
 }
