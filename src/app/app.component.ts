@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
       mainLink: true,
       url: '/intro',
       name: 'Home',
-      active: true,
+      active: false,
       submenu: [
       ],
     },
@@ -37,9 +37,7 @@ export class AppComponent implements OnInit{
       name: 'Components',
       active: false,
       submenu: [
-        { name: 'Buttons', url: '#' },
-        { name: 'Table', url: '#' },
-        { name: 'Empty Elements', url: '#' }
+        { name: 'Tables', url: '/tables' }
       ],
     },
     {

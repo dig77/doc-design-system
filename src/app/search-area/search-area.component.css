@@ -139,7 +139,7 @@
   }
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 120em) {
   .container {
     display: grid;
     grid-template-columns: 60vw 1fr;

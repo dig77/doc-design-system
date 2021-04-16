@@ -16,6 +16,7 @@ import { ResultCardComponent } from './search-area/result-card/result-card.compo
 import { CompanyActionsComponent } from './company-info/company-actions/company-actions.component';
 import { CommonModule } from '@angular/common';
 import { ThemeToggler } from './shared/services/theme-toggle.service';
+import { TablesComponent } from './tables/tables.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ThemeToggler } from './shared/services/theme-toggle.service';
     SearchBarComponent,
     EmptySearchComponent,
     ResultCardComponent,
-    CompanyActionsComponent
+    CompanyActionsComponent,
+    TablesComponent
   ],
   imports: [
     BrowserModule,

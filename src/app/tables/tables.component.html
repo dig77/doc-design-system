@@ -1,0 +1,114 @@
+<div class="container">
+  <app-header [title]="'Tables'"></app-header>
+  <p class="page-info">
+    An HTML structure for creating rows and columns on a Web page. The Table tag defines the overall table and the Table Row (TR) tag is used to build each row. The Table Data (TD) tag defines the actual data. Prior to HTML5, tables were often used for virtually every element on the page. To conform to HTML5, tables should be used only for tabular data.
+  </p>
+  <div class="example">
+    <h2>Basic use of table</h2>
+    <mat-tab-group animationDuration="0ms" [(selectedIndex)]=selectedIndex>
+      <mat-tab label="HTML">
+        <pre>{{snippet1}}</pre>
+      </mat-tab>
+      <mat-tab label="CSS">
+        <pre>{{snippet2}}</pre>
+      </mat-tab>
+      <mat-tab label="Result">
+        <table class="app-table">
+          <tr class="is-header">
+            <th>Document Number</th>
+            <th>Document Type</th>
+            <th>Creation Date</th>
+            <th>Receptor Code</th>
+            <th>Receptor Name</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td data-th="Document Number">
+              <a class="is-link" href="#">123456789009</a>
+            </td>
+            <td data-th="Document Type">DESPATCH_ADVICE</td>
+            <td data-th="Creation Date">04/03/2021 00:03:00</td>
+            <td data-th="Receptor Code">5600000675366</td>
+            <td data-th="Receptor Name">ENT. AGUA PENA FRES.</td>
+            <td data-th="Status">
+              <span class="tag is-warning">DOCSTS_DRAFT</span>
+            </td>
+            <td data-th="Action">
+              <button
+                mat-icon-button
+                color="primary"
+                aria-label="Example icon button with a home icon"
+              >
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-th="Document Number">
+              <a class="is-link" href="#">123456789009</a>
+            </td>
+            <td data-th="Document Type">DESPATCH_ADVICE</td>
+            <td data-th="Creation Date">04/03/2021 00:03:00</td>
+            <td data-th="Receptor Code">5600000675366</td>
+            <td data-th="Receptor Name">ENT. AGUA PENA FRES.</td>
+            <td data-th="Status">
+              <span class="tag is-warning">DOCSTS_DRAFT</span>
+            </td>
+            <td data-th="Action">
+              <button
+                mat-icon-button
+                color="primary"
+                aria-label="Example icon button with a home icon"
+              >
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-th="Document Number">
+              <a class="is-link" href="#">123456789009</a>
+            </td>
+            <td data-th="Document Type">DESPATCH_ADVICE</td>
+            <td data-th="Creation Date">04/03/2021 00:03:00</td>
+            <td data-th="Receptor Code">5600000675366</td>
+            <td data-th="Receptor Name">ENT. AGUA PENA FRES.</td>
+            <td data-th="Status">
+              <span class="tag is-warning">DOCSTS_DRAFT</span>
+            </td>
+            <td data-th="Action">
+              <button
+                mat-icon-button
+                color="primary"
+                aria-label="Example icon button with a home icon"
+              >
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td data-th="Document Number">
+              <a class="is-link" href="#">123456789009</a>
+            </td>
+            <td data-th="Document Type">DESPATCH_ADVICE</td>
+            <td data-th="Creation Date">04/03/2021 00:03:00</td>
+            <td data-th="Receptor Code">5600000675366</td>
+            <td data-th="Receptor Name">ENT. AGUA PENA FRES.</td>
+            <td data-th="Status">
+              <span class="tag is-warning">DOCSTS_DRAFT</span>
+            </td>
+            <td data-th="Action">
+              <button
+                mat-icon-button
+                color="primary"
+                aria-label="Example icon button with a home icon"
+              >
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
