@@ -1,22 +1,26 @@
 .example {
-    border: 1px solid rgba(var(--rgb-primary), .2);
-    border-radius: var(--br-sm);
-    padding: 2em;
+  border: 1px solid rgba(var(--rgb-primary), 0.2);
+  border-radius: var(--br-sm);
+  padding: 2em;
 }
 
 pre {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 h2 {
-    font-weight: 600;
+  font-weight: 600;
+  margin-bottom: 1.5em;
 }
 
 .page-info {
-    font-family: var(--alternative-font);
-    color: rgba(var(--rgb-primary), .8);
-    line-height: 1.7;
-    margin: 2em 0;
+  font-family: var(--alternative-font);
+  line-height: 1.7;
+  margin: 1em 0 2em;
+}
+
+.table-wrap {
+  margin-top: 2em;
 }
 
 .app-table {
@@ -46,7 +50,7 @@ h2 {
 .app-table td {
   display: block;
   font-weight: 500;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .app-table td:first-child {
@@ -71,8 +75,8 @@ h2 {
 }
 
 .app-table tr {
-    border: 1px solid rgba(var(--rgb-primary), 0.08);
-    border-radius: var(--br-md);
+  border: 1px solid rgba(var(--rgb-primary), 0.08);
+  border-radius: var(--br-md);
 }
 
 @media (min-width: 100em) {
@@ -87,6 +91,7 @@ h2 {
     padding-bottom: 2em;
     border-bottom: 1px solid rgba(var(--rgb-primary), 0.1);
     line-height: 1.5;
+    vertical-align: bottom;
   }
 
   .app-table th,
