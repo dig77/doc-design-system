@@ -161,7 +161,7 @@ snippet2 =
   
   .app-table th,
   .app-table td:before {
-    color: rgba(var(--rgb-primary), 0.5);
+    color: rgba(var(--rgb-primary), 0.8);
   }
   
   .app-table tr {
