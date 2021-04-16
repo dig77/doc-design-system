@@ -12,6 +12,7 @@
   --main-font: "Quicksand", sans-serif;
   --alternative-font: "Bitter", serif;
   --font-color-primary: #212121;
+  --font-color-alternative: #757575;
 
   /* colors */
   --rgb-primary: 2, 3, 3;
@@ -48,6 +49,7 @@
   --main-font: "Quicksand", sans-serif;
   --alternative-font: "Bitter", serif;
   --font-color-primary: #fff;
+  --font-color-alternative: #ebebeb;
 
   /* colors */
   --rgb-primary: 171, 71, 188;
@@ -200,4 +202,8 @@ app-intro header h1 {
 
 .dark .main-container .company-action-description {
   color: rgba(var(--rgb-primary), 0.9);
+}
+
+.dark .main-container .mat-tab-label, .dark .main-container .mat-tab-link {
+  color: var(--font-color-primary);
 }

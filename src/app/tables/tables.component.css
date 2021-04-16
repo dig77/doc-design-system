@@ -15,6 +15,7 @@ h2 {
 
 .page-info {
   font-family: var(--alternative-font);
+  color: var(--font-color-alternative);
   line-height: 1.7;
   margin: 1em 0 2em;
 }

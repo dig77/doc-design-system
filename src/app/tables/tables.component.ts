@@ -236,17 +236,6 @@ snippet2 =
     }
   }
   
-  @media (min-width: 120em) {
-    .container {
-      display: grid;
-      grid-template-columns: 60vw 1fr;
-      column-gap: 0;
-    }
-  
-    .container > * {
-      grid-column: 1;
-    }
-  }
   `
 
 }
