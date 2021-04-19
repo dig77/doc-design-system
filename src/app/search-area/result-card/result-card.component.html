@@ -1,38 +1,47 @@
 <div class="results-card child fadeIn">
   <div class="results-card-stack-tags">
     <div class="tags has-addons">
-      <span class="tag">Status</span>
-      <span class="tag is-primary">Active</span>
+      <span class="tag">Account Type</span>
+      <span class="tag is-primary">{{result.accType}}</span>
     </div>
-    <div class="tags has-addons">
-      <span class="tag">Type</span>
-      <span class="tag is-info">Billed</span>
+    <div class="tags has-addons" *ngIf="result.network.length">
+      <span class="tag">Network</span>
+      <span class="tag is-info">{{result.network}}</span>
     </div>
   </div>
   <div class="results-card-stack-data">
     <div class="result-card-image">
       <img
-        src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
+        src="{{result.companyImage}}"
         alt=""
       />
     </div>
     <div class="result-card-main-data">
-      <div class="result-card-name">{{result.name}}</div>
-      <div class="result-card-vat">
-        <a href="">{{result.vat}}</a>
+      <div class="result-card-name">{{result.companyName}}</div>
+      <div class="result-card-code">
+        <a href="">{{result.companyCode}}</a>
+      </div>
+      <div class="tags has-addons result-card-status">
+        <span class="tag">Status</span>
+        <span class="tag is-primary">{{result.status}}</span>
       </div>
     </div>
   </div>
   <div class="results-card-stack-extra">
     <div class="results-extra-data-1">
-      <p>Lorem ipsum dolor sit amet</p>
-      <p>consectetur adipisicing elit</p>
-      <p>Lorem ipsum dolor sit amet consectetur</p>
+      <p>{{result.companyNick}}</p>
+      <p>{{result.companyCountryVAT}}</p>
+      <p><small>GLN:</small> {{result.companyGLN}}</p>
     </div>
     <div class="results-extra-data-2">
-      <p>Lorem ipsum dolor sit</p>
-      <p>Lorem ipsum dolor sit ametadipisicing</p>
-      <p>Lorem ipsum dolor adipisicing elit</p>
+      <p>{{result.companyAddress}}</p>
+      <p>{{result.companyCity}}</p>
+      <p>{{result.companyZIPCode}}</p>
+    </div>
+    <div class="results-extra-data-3">
+      <p>{{result.companyUrl}}</p>
+      <p>{{result.companyEmail}}</p>
+      <p>{{result.companyPhone}}</p>
     </div>
   </div>
 </div>

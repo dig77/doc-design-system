@@ -1,17 +1,18 @@
 <div class="container">
+  <!-- header -->
   <app-header [title]="'Search Area'"></app-header>
-  
+  <!-- search bar -->
   <app-search-bar (hideClick)="showResults()"></app-search-bar>
-  
+  <!-- empty search element -->
   <app-empty-search *ngIf="hideEmpty"></app-empty-search>
-  
+  <!-- loader -->
   <div class="loader" *ngIf="!hideEmpty && !hasResults" @simpleFade>
     <div class="cell">
       <div class="pl pl-kinetic"></div>
       <div class="pl-name">Loading</div>
     </div>
   </div>
-  
+  <!-- results area -->
   <div class="results-area" *ngIf="!hideEmpty && hasResults" @classStagger>
     <div class="results-actions" [ngClass]="{sticky : isSticky}">
       <div>

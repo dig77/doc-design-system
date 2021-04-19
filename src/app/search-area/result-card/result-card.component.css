@@ -1,23 +1,39 @@
 :host(.listed) .results-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "area1 area2 area2 area2"
+    "area3 area3 area3 area3";
+  row-gap: 0.5em;
+  padding: 1em 2em;
   animation: fadeIn ease 1s;
 }
 
+.results-card-stack-data {
+  grid-area: area1;
+}
+
+.results-card-stack-extra {
+  grid-area: area2;
+}
+
+.results-card-stack-tags {
+  grid-area: area3;
+}
+
 :host(.listed) .results-card .results-card-stack-tags {
-  order: 2;
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
+  justify-content: flex-end;
+}
+
+:host(.listed) .results-card .results-card-stack-tags > div {
+  margin-left: 1em;
 }
 
 :host(.listed) .results-card .results-card-stack-data {
-  order: 0;
-  flex-direction: column;
-  padding: 0;
-  align-items: center;
+  min-width: 350px;
+  padding-bottom: 0;
 }
 
 :host(.listed) .results-card .results-card-stack-extra {
@@ -30,7 +46,8 @@
   padding: 0 2em;
 }
 
-:host(.listed) .results-card .results-card-stack-extra .results-extra-data-2 {
+:host(.listed) .results-card .results-card-stack-extra .results-extra-data-2,
+:host(.listed) .results-card .results-card-stack-extra .results-extra-data-3 {
   margin-top: 0;
   border-top: none;
   padding-top: 0;
@@ -56,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 2em;
+  padding: 0 0 1.5em;
 }
 
 .result-card-main-data {
@@ -70,13 +87,17 @@
 }
 
 .result-card-name {
-  padding: 1em 0;
+  padding: 0.7em 0;
   font-weight: 700;
 }
 
-.result-card-vat a {
+.result-card-code a {
   color: rgba(var(--rgb-secondary), 1);
   text-decoration: none;
+}
+
+.result-card-status {
+  padding-top: 0.7em;
 }
 
 .result-card-image img {
@@ -86,21 +107,45 @@
 }
 
 .results-extra-data-1,
-.results-extra-data-2 {
+.results-extra-data-2,
+.results-extra-data-3 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.results-extra-data-1 P:last-child,
+.results-extra-data-2 P:last-child,
+.results-extra-data-3 P:last-child {
+  margin-bottom: 0;
+}
+
+:host(.listed) .results-extra-data-1 P,
+:host(.listed) .results-extra-data-2 P,
+:host(.listed) .results-extra-data-3 P {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(12vw - 50px);
+  display: block;
+}
+
+:host(.listed) .result-card-main-data,
 :host(.listed) .results-extra-data-1,
-:host(.listed) .results-extra-data-1 {
+:host(.listed) .results-extra-data-2,
+:host(.listed) .results-extra-data-3 {
   align-items: start;
 }
 
-.results-extra-data-2 {
-  margin-top: 1.5em;
+.results-extra-data-2,
+.results-extra-data-3 {
+  margin-top: 1em;
   border-top: 1px solid rgba(var(--rgb-primary), 0.05);
-  padding-top: 1.5em;
+  padding-top: 1em;
+}
+
+small {
+  font-weight: 600;
 }
 
 @keyframes fadeIn {
@@ -123,7 +168,9 @@
   }
 
   :host(.listed) .results-card .results-card-stack-extra {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
   }
 
   :host(.listed) .results-card .results-card-stack-data {
