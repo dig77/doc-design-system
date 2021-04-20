@@ -6,7 +6,7 @@
     "area1 area2 area2 area2"
     "area3 area3 area3 area3";
   row-gap: 0.5em;
-  padding: 1em 2em;
+  padding: 1em 1.5em;
   animation: fadeIn ease 1s;
 }
 
@@ -54,7 +54,7 @@
 }
 
 :host(.listed) .results-card .result-card-name {
-  padding: 0 0 1em;
+  padding: 0 0 0.5em;
 }
 
 .results-card {
@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 1.5em;
+  padding: 0 0 2em;
 }
 
 .result-card-main-data {
@@ -83,7 +83,21 @@
 }
 
 .result-card-image {
-  width: 150px;
+  width: 115px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.7em 0;
+}
+
+:host(.listed) .result-card-image {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.5em 0 1em;
 }
 
 .result-card-name {
@@ -98,6 +112,10 @@
 
 .result-card-status {
   padding-top: 0.7em;
+}
+
+.result-card-status .tag {
+  margin-bottom: 0;
 }
 
 .result-card-image img {
@@ -148,6 +166,19 @@ small {
   font-weight: 600;
 }
 
+.zip-code-data {
+  display: flex;
+  align-items: center;
+}
+
+.zip-code-data p {
+  margin-bottom: 0;
+}
+
+.zip-code-data p:nth-child(1) {
+  padding-right: 0.7em;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -160,7 +191,7 @@ small {
 
 @media (min-width: 48em) {
   .results-card {
-    padding: 2em;
+    padding: 1.5em;
   }
 
   :host(.listed) .results-card {
@@ -169,8 +200,9 @@ small {
 
   :host(.listed) .results-card .results-card-stack-extra {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    align-content: center;
   }
 
   :host(.listed) .results-card .results-card-stack-data {

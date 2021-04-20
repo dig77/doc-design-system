@@ -22,7 +22,7 @@
         <a href="">{{result.companyCode}}</a>
       </div>
       <div class="tags has-addons result-card-status">
-        <span class="tag">Status</span>
+        <span class="tag">{{result.labelStatus}}</span>
         <span class="tag is-primary">{{result.status}}</span>
       </div>
     </div>
@@ -35,8 +35,10 @@
     </div>
     <div class="results-extra-data-2">
       <p>{{result.companyAddress}}</p>
-      <p>{{result.companyCity}}</p>
-      <p>{{result.companyZIPCode}}</p>
+      <div class="zip-code-data">
+        <p>{{result.companyZIPCode}}</p>
+        <p>{{result.companyCity}}</p>
+      </div>
     </div>
     <div class="results-extra-data-3">
       <p>{{result.companyUrl}}</p>
