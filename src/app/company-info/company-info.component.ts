@@ -20,7 +20,15 @@ export class CompanyInfoComponent implements OnInit {
     {title: 'Reports', description: 'Company Reports'},
     {title: 'Reports Configuration', description: 'Configuration of company reports'},
     {title: 'Translation Tables', description: 'Translation Tables'},
-    {title: 'Documents Converters', description: 'Configuration of company document converters'}
+    {title: 'Documents Converters', description: 'Configuration of company document converters'},
+    {title: 'Software Configurations', description: 'Software Settings'},
+    {title: 'Email Templates', description: 'Company email Templatess'},
+    {title: 'PDF Templates', description: 'PDF Document Layouts (razor views)'},
+    {title: 'Notifications', description: 'Company Notifications'},
+    {title: 'Documents to Integrate', description: 'Integration mappers and validators'},
+    {title: 'Entity Connections', description: 'Integration connections network'},
+    {title: 'Company configurations', description: 'Special configurations(tolerance)'},
+    {title: 'Invoice PDF Layouts', description: 'Invoices that share the same pdf structure'},
   ]
 
   showActions: boolean = false;

@@ -159,14 +159,18 @@ app-intro header h1 {
   top: -0.4375em;
 }
 
+.mat-input-element:disabled {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 /* dark theme styles */
 
 .dark .main-container main .mat-form-field-label {
-  color: whitexsoke;
+  color: whitesmoke;
 }
 
 .dark .main-container main .mat-form-field-underline {
-  background-color: whitexsoke;
+  background-color: whitesmoke;
 }
 
 .dark .main-container .company-name {
@@ -203,7 +207,7 @@ app-intro header h1 {
 .dark .main-container .mat-select-value,
 .dark .main-container .mat-icon-button.mat-button-disabled.mat-button-disabled,
 .dark .main-container .mat-select-arrow {
-  color: whitexsoke;
+  color: whitesmoke;
 }
 
 .dark .main-container .image-container {
@@ -219,10 +223,15 @@ app-intro header h1 {
 }
 
 .dark .main-container .company-action-description {
-  color: rgba(var(--rgb-primary), 0.9);
+  color: rgba(var(--rgb-primary), 1);
 }
 
 .dark .main-container .mat-tab-label,
 .dark .main-container .mat-tab-link {
   color: var(--font-color-primary);
+}
+
+
+.dark .main-container .mat-input-element:disabled {
+  color: rgba(240, 240, 240, 0.6);
 }

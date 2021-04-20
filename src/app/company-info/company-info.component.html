@@ -1,4 +1,4 @@
-<div class="container" [ngClass]="{aside:showActions}">
+<div class="container" [ngClass]="{ aside: showActions }">
   <app-header [title]="'Company Details'"></app-header>
   <div class="company-header">
     <div class="is-company">
@@ -37,52 +37,72 @@
         <div class="is-card-content">
           <div class="company-details-grid">
             <mat-form-field class="example-full-width">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Saphety" />
+              <mat-label>Entity Name</mat-label>
+              <input matInput value="MCH, SA - Covilhã" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Location</mat-label>
-              <input matInput placeholder="Lisbon" />
+              <mat-label>Entity Nickname</mat-label>
+              <input matInput value="CNT Covilha" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Type</mat-label>
-              <input matInput placeholder="Restricted" />
+              <mat-label>VAT Number</mat-label>
+              <input matInput value="0" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Status</mat-label>
-              <input matInput placeholder="Active" />
+              <mat-label>Capital Value</mat-label>
+              <input matInput value="0" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Saphety" />
+              <mat-label>Commercial Record</mat-label>
+              <input matInput value="0" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Location</mat-label>
-              <input matInput placeholder="Lisbon" />
+              <mat-label>Commercial Record Office</mat-label>
+              <input matInput value="0" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Type</mat-label>
-              <input matInput placeholder="Restricted" />
+              <mat-label>GLN</mat-label>
+              <input matInput value="5600000000472" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Status</mat-label>
-              <input matInput placeholder="Active" />
+              <mat-label>Fiscal Type</mat-label>
+              <input matInput value="-" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Saphety" />
+              <mat-label>Address Line</mat-label>
+              <input matInput value="Eixo TCT (Junto à Escola C+S)" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Location</mat-label>
-              <input matInput placeholder="Lisbon" />
+              <mat-label>Country</mat-label>
+              <input matInput value=" Portugal" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Type</mat-label>
-              <input matInput placeholder="Restricted" />
+              <mat-label>City</mat-label>
+              <input matInput value="Covilhã" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Status</mat-label>
-              <input matInput placeholder="Active" />
+              <mat-label>Zip Code</mat-label>
+              <input matInput value="6200" disabled />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Zip Area</mat-label>
+              <input matInput value="Covilhã" disabled />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Telephone</mat-label>
+              <input matInput value="-" disabled />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Fax</mat-label>
+              <input matInput value="-" disabled />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Website</mat-label>
+              <input matInput value="-" disabled />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Language</mat-label>
+              <input matInput value="-" disabled />
             </mat-form-field>
           </div>
           <div class="company-details-metadata">
@@ -94,14 +114,14 @@
             </div>
             <div class="control">
               <div class="tags has-addons">
-                <span class="tag is-light">Type</span>
-                <span class="tag is-warning">restricted</span>
+                <span class="tag is-light">Changing Date</span>
+                <span class="tag is-warning">23/02/2021 10:54:55</span>
               </div>
             </div>
             <div class="control">
               <div class="tags has-addons">
                 <span class="tag is-light">Author</span>
-                <span class="tag is-info">JPR</span>
+                <span class="tag is-info">J Doe</span>
               </div>
             </div>
           </div>
@@ -117,20 +137,16 @@
         <div class="is-card-content" *ngIf="isShown['partners']" @expandable>
           <div class="company-partners-grid">
             <mat-form-field class="example-full-width">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Saphety" />
+              <mat-label>Finishing Partner</mat-label>
+              <input matInput value="-" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Location</mat-label>
-              <input matInput placeholder="Lisbon" />
+              <mat-label>OCR Partner</mat-label>
+              <input matInput value="-" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Type</mat-label>
-              <input matInput placeholder="Restricted" />
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-              <mat-label>Status</mat-label>
-              <input matInput placeholder="Active" />
+              <mat-label>Notification Email Sender</mat-label>
+              <input matInput value="-" disabled />
             </mat-form-field>
           </div>
         </div>
@@ -145,16 +161,18 @@
         <div class="is-card-content" *ngIf="isShown['type']" @expandable>
           <div class="company-account-type-grid">
             <mat-form-field class="example-full-width">
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Saphety" />
+              <mat-label>Code</mat-label>
+              <input matInput value="5600000000472" disabled />
             </mat-form-field>
             <mat-form-field class="example-full-width">
-              <mat-label>Location</mat-label>
-              <input matInput placeholder="Lisbon" />
+              <mat-label>Account Type</mat-label>
+              <input matInput value="List-AccountType.Restricted" disabled />
             </mat-form-field>
           </div>
           <div>
-            <mat-checkbox class="example-margin">Check me!</mat-checkbox>
+            <mat-checkbox class="example-margin"
+              >Available to discover</mat-checkbox
+            >
           </div>
         </div>
       </div>
