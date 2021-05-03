@@ -134,6 +134,39 @@
   order: 0;
 }
 
+.alt-top {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 0;
+}
+
+.alt-company {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+}
+
+.areas-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1.5em;
+}
+
+.is-area {
+  margin: 0 1em 1em 0;
+  background-color: rgb(97 97 97 / 20%);
+  display: flex;
+  justify-content:center;
+  padding: 1em 1.5em;
+  border-radius: var(--br-xs);
+  box-shadow: var(--shadow);
+}
+
+.is-area-icon {
+  padding: 0 .7em;
+}
+
+
 @media (min-width: 48em) {
   .container {
     flex-direction: column;

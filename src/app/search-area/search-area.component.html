@@ -29,10 +29,10 @@
       <div>
         <mat-button-toggle-group #group="matButtonToggleGroup">
           <mat-button-toggle
-            value="grid"
-            aria-label="grid-view"
-            (click)="changeView()"
-            matTooltip="Grid View"
+            value="card"
+            aria-label="card-view"
+            (click)="changeCardView()"
+            matTooltip="Card View"
             matTooltipPosition="above"
           >
             <span><i class="fal fa-grip-horizontal"></i></span>
@@ -40,7 +40,7 @@
           <mat-button-toggle
             value="list"
             aria-label="list-view"
-            (click)="changeView()"
+            (click)="changeListView()"
             matTooltip="List View"
             matTooltipPosition="above"
           >

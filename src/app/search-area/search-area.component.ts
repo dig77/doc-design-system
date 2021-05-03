@@ -145,8 +145,12 @@ export class SearchAreaComponent implements OnInit {
     }, 3000);
   }
 
-  changeView() {
-    this.isView = !this.isView;
+  changeCardView() {
+    this.isView = true;
+  }
+
+  changeListView() {
+    this.isView = false;
   }
 
   @HostListener('window:scroll', ['$event'])
