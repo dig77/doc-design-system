@@ -109,6 +109,16 @@ export const simpleFade = trigger('simpleFade', [
     ])
 ])
 
+export const fadingTrigger = trigger('isFade', [
+    transition('* => *', [
+        animate(500, keyframes([
+            style({opacity:0}),
+            style({opacity:0.5}),
+            style({opacity:1})
+          ]))
+      ]),
+])
+
 
 
 

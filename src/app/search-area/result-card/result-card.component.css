@@ -7,7 +7,6 @@
     "area3 area3 area3 area3";
   row-gap: 0.5em;
   padding: 1em 1.5em;
-  animation: fadeIn ease 1s;
 }
 
 .results-card-stack-data {

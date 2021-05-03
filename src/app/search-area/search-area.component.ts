@@ -1,11 +1,11 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { classStagger, simpleFade } from '../animations/animate';
+import { classStagger, simpleFade, fadingTrigger } from '../animations/animate';
 
 @Component({
   selector: 'app-search-area',
   templateUrl: './search-area.component.html',
   styleUrls: ['./search-area.component.css'],
-  animations: [classStagger, simpleFade],
+  animations: [classStagger, simpleFade, fadingTrigger],
 })
 export class SearchAreaComponent implements OnInit {
   hideEmpty: boolean;
@@ -34,7 +34,7 @@ export class SearchAreaComponent implements OnInit {
       accType: 'Restricted',
       network: '',
       companyImage:
-        'http://assets.stickpng.com/thumbs/5ec8e3580f811b00044fe4b1.png',
+        'https://upload.wikimedia.org/wikipedia/commons/7/74/Countable_Logo_.png',
       companyName: 'CNT Covilha',
       companyCode: '5600000000472',
       labelStatus: 'NonBillable',
@@ -53,7 +53,7 @@ export class SearchAreaComponent implements OnInit {
       accType: 'Restricted',
       network: '',
       companyImage:
-        'http://assets.stickpng.com/thumbs/5859902f4f6ae202fedf28d0.png',
+        'https://upload.wikimedia.org/wikipedia/commons/4/47/PricewaterhouseCoopers_Logo.png',
       companyName: 'MDL Felgueiras',
       companyCode: '5600000000465',
       labelStatus: 'NonBillable',
@@ -72,7 +72,7 @@ export class SearchAreaComponent implements OnInit {
       accType: 'Restricted',
       network: 'test',
       companyImage:
-        'http://assets.stickpng.com/thumbs/5cb781d6a7c7755bf004c13f.png',
+        'https://upload.wikimedia.org/wikipedia/commons/f/f5/Adler_Group_Logo_Petrol_%C2%A9.png',
       companyName: 'CNT S.J. Madeira',
       companyCode: '5600000000441',
       labelStatus: 'NonBillable',
@@ -91,7 +91,7 @@ export class SearchAreaComponent implements OnInit {
       accType: 'Restricted',
       network: 'test',
       companyImage:
-        'http://assets.stickpng.com/thumbs/5cb7819fa7c7755bf004c13a.png',
+        'https://upload.wikimedia.org/wikipedia/commons/8/86/Lundin_Energy_Logo_RGB-high-%281236x522%29.png',
       companyName: 'MDL Loule',
       companyCode: '5600000000298',
       labelStatus: 'NonBillable',
@@ -110,7 +110,7 @@ export class SearchAreaComponent implements OnInit {
       accType: 'Restricted',
       network: 'test',
       companyImage:
-        'http://assets.stickpng.com/thumbs/585ab4014f6ae202fedf292b.png',
+        'https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_color_eps-%28Converted%29.png',
       companyName: 'CNT Portimao',
       companyCode: '5600000000267',
       labelStatus: 'NonBillable',

@@ -54,6 +54,7 @@
         *ngFor="let result of results"
         [result]="result"
         [ngClass]="{ listed: !isView, grid: isView }"
+        [@isFade]="isView"
       ></app-result-card>
     </div>
   </div>

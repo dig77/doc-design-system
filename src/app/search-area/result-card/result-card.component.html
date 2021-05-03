@@ -1,49 +1,46 @@
-<div class="results-card child fadeIn">
+<div class="results-card child">
   <div class="results-card-stack-tags">
     <div class="tags has-addons">
       <span class="tag">Account Type</span>
-      <span class="tag is-primary">{{result.accType}}</span>
+      <span class="tag is-primary">{{ result.accType }}</span>
     </div>
     <div class="tags has-addons" *ngIf="result.network.length">
       <span class="tag">Network</span>
-      <span class="tag is-info">{{result.network}}</span>
+      <span class="tag is-info">{{ result.network }}</span>
     </div>
   </div>
   <div class="results-card-stack-data">
     <div class="result-card-image">
-      <img
-        src="{{result.companyImage}}"
-        alt=""
-      />
+      <img src="{{ result.companyImage }}" alt="" />
     </div>
     <div class="result-card-main-data">
-      <div class="result-card-name">{{result.companyName}}</div>
+      <div class="result-card-name">{{ result.companyName }}</div>
       <div class="result-card-code">
-        <a href="">{{result.companyCode}}</a>
+        <a href="">{{ result.companyCode }}</a>
       </div>
       <div class="tags has-addons result-card-status">
-        <span class="tag">{{result.labelStatus}}</span>
-        <span class="tag is-primary">{{result.status}}</span>
+        <span class="tag">{{ result.labelStatus }}</span>
+        <span class="tag is-primary">{{ result.status }}</span>
       </div>
     </div>
   </div>
   <div class="results-card-stack-extra">
     <div class="results-extra-data-1">
-      <p>{{result.companyNick}}</p>
-      <p>{{result.companyCountryVAT}}</p>
-      <p><small>GLN:</small> {{result.companyGLN}}</p>
+      <p>{{ result.companyNick }}</p>
+      <p>{{ result.companyCountryVAT }}</p>
+      <p><small>GLN:</small> {{ result.companyGLN }}</p>
     </div>
     <div class="results-extra-data-2">
-      <p>{{result.companyAddress}}</p>
+      <p>{{ result.companyAddress }}</p>
       <div class="zip-code-data">
-        <p>{{result.companyZIPCode}}</p>
-        <p>{{result.companyCity}}</p>
+        <p>{{ result.companyZIPCode }}</p>
+        <p>{{ result.companyCity }}</p>
       </div>
     </div>
     <div class="results-extra-data-3">
-      <p>{{result.companyUrl}}</p>
-      <p>{{result.companyEmail}}</p>
-      <p>{{result.companyPhone}}</p>
+      <p>{{ result.companyUrl }}</p>
+      <p>{{ result.companyEmail }}</p>
+      <p>{{ result.companyPhone }}</p>
     </div>
   </div>
 </div>
