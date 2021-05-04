@@ -131,8 +131,6 @@ body {
   color: rgba(var(--rgb-primary), 0.8);
 }
 
-/* inputs */
-
 /* overrides */
 
 app-intro header h1 {
@@ -167,6 +165,10 @@ app-intro header h1 {
 
 .mat-input-element:disabled {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: rgba(0, 0, 0, 0.77);
 }
 
 /* dark theme styles */
@@ -236,7 +238,6 @@ app-intro header h1 {
 .dark .main-container .mat-tab-link {
   color: var(--font-color-primary);
 }
-
 
 .dark .main-container .mat-input-element:disabled {
   color: rgba(240, 240, 240, 0.6);

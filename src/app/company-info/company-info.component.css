@@ -136,7 +136,7 @@
 
 .company-header-alt {
   display: grid;
-  grid-template-columns:300px 2fr;
+  grid-template-columns:270px 2fr;
   grid-template-rows: auto;
   grid-template-areas: 
   "data1 data2"
