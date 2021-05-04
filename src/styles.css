@@ -38,6 +38,12 @@
   --br-sm: 10px;
   --br-md: 15px;
   --br-lg: 20px;
+
+  /* area-links */
+  --area-color-1:#D81B60;
+  --area-color-2:#5E35B1;
+  --area-color-3:#1E88E5;
+  --area-color-4:#00ACC1;
 }
 
 .dark {

@@ -1,6 +1,6 @@
 <div class="container" [ngClass]="{ aside: showActions }">
   <app-header [title]="'Company Details'"></app-header>
-  <div class="company-header">
+  <div class="company-header" style="display: none">
     <div class="is-company">
       <div class="company-image">
         <img
@@ -27,50 +27,53 @@
         <button mat-raised-button color="accent">Edit</button>
       </div>
     </div>
-    <div class="is-company-data-alt" style="display:none">
-      <div class="alt-top">
-        <div class="alt-company">
-          <div class="company-name">Company A</div>
-          <div class="company-user-email">usertest@company.com</div>
-        </div>
-        <div class="company-edit">
-          <button mat-raised-button color="accent">Edit</button>
-        </div>
+  </div>
+  <div class="company-header-alt" [ngClass]="expanded ? 'is-expanded':'not-expanded'">
+    <div class="is-company" [@isFade]="expanded">
+      <div class="company-image">
+        <img
+          src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
+          alt="company logo"
+        />
       </div>
-      <div class="alt-bottom">
-        <div class="areas-wrap">
+      <div class="company-status">
+        <span class="tag is-primary">Active</span>
+      </div>
+    </div>
+    <div class="alt-top" [@isFade]="expanded">
+      <div class="alt-company">
+        <div class="company-name">Company A</div>
+        <div class="company-user-email">usertest@company.com</div>
+      </div>
+      <div class="company-edit">
+        <button mat-raised-button color="primary">Edit</button>
+      </div>
+    </div>
+    <div class="alt-bottom">
+      <div class="areas-wrap" [@isFade]="expanded">
+        <div *ngFor="let arealink of arealinks | slice: 0:show; let i = index">
           <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
+            <div class="is-area-icon">
+              <span class="material-icons">
+                {{ arealink.icon }}
+              </span>
+            </div>
+            <div class="is-area-label">{{ arealink.title }}</div>
           </div>
-          <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
-          </div>
-          <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
-          </div>
-          <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
-          </div>
-          <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
-          </div>
-          <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
-          </div>
-          <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
-          </div>
-          <div class="is-area">
-            <div class="is-area-icon"><i class="fal fa-star-of-life"></i></div>
-            <div class="is-area-label">Link Area</div>
-          </div>
+          <button
+            mat-flat-button
+            *ngIf="i == 4 && show == 5"
+            (click)="show = arealink.length; expanded = !expanded"
+          >
+            show More
+          </button>
+          <button
+            mat-flat-button
+            *ngIf="i == arealinks.length - 1"
+            (click)="show = 5; expanded = !expanded"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>

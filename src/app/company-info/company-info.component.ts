@@ -1,14 +1,22 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
-import { classStagger, showExpandableTrigger } from '../animations/animate';
+import { classStagger, fadingTrigger, showExpandableTrigger } from '../animations/animate';
 import { AppComponent } from '../app.component';
+import { AreaLink } from '../shared/models/area-link.model';
+import { AREA_LINK } from '../shared/models/area-link';
 
 @Component({
   selector: 'app-company-info',
   templateUrl: './company-info.component.html',
   styleUrls: ['./company-info.component.css'],
-  animations: [showExpandableTrigger, classStagger]
+  animations: [showExpandableTrigger, classStagger, fadingTrigger]
 })
 export class CompanyInfoComponent implements OnInit {
+
+  arealinks: AreaLink[] = AREA_LINK;
+
+  show: number = 5;
+
+  expanded:boolean = false;
 
    isShown = {
     'partners': false,
