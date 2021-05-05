@@ -46,7 +46,7 @@ $doc-design-system-theme: mat-light-theme((
   $dt-warn: mat-palette($mat-red, 700);
 
   $dark-theme: mat-light-theme($dt-primary, $dt-accent,$dt-warn);
-  @include angular-material-theme($dark-theme);
+  @include angular-material-color($dark-theme);
 }
 
 // Include theme styles for core and each component used in your app.

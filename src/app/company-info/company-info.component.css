@@ -189,7 +189,7 @@
 
 .areas-wrap > div {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .areas-wrap > div:nth-child(4n+1) .is-area-icon {
@@ -214,13 +214,25 @@
   display: flex;
   justify-content:center;
   align-items: center;
-  padding: .8em 1.5em;
+  padding: .8em 1.5em .6em;
   border-radius: var(--br-xs);
   box-shadow: var(--shadow);
+  transition: all .3s ease;
+}
+
+.is-area + button {
+  margin-bottom: 1em;
+}
+
+.is-area:hover {
+  background-color: var(--color-primary);
+  color: var(--primary-contrast);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
 }
 
 .is-area-icon {
-  padding: 0 .7em;
+  padding-right: .7em;
 }
 
 .is-area-label {
