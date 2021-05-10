@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .results-area {
   margin-bottom: 3em;
 }

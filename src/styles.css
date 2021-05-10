@@ -41,10 +41,10 @@
   --br-lg: 20px;
 
   /* area-links */
-  --area-color-1:#D81B60;
-  --area-color-2:#5E35B1;
-  --area-color-3:#1E88E5;
-  --area-color-4:#00ACC1;
+  --area-color-1: #d81b60;
+  --area-color-2: #5e35b1;
+  --area-color-3: #1e88e5;
+  --area-color-4: #00acc1;
 }
 
 .dark {
@@ -170,6 +170,22 @@ app-intro header h1 {
 
 .mat-form-field-appearance-legacy .mat-form-field-label {
   color: rgba(0, 0, 0, 0.77);
+}
+
+.areas-wrap > app-company-area:nth-child(4n+1) .is-area-icon {
+  color:var(--area-color-1);
+}
+
+.areas-wrap > app-company-area:nth-child(4n+2) .is-area-icon {
+  color:var(--area-color-2);
+}
+
+.areas-wrap > app-company-area:nth-child(4n+3) .is-area-icon {
+  color:var(--area-color-3);
+}
+
+.areas-wrap > app-company-area:nth-child(4n+4) .is-area-icon {
+  color:var(--area-color-4);
 }
 
 /* dark theme styles */

@@ -1,13 +1,16 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener, Input, OnInit } from '@angular/core';
 import { classStagger, simpleFade, fadingTrigger } from '../animations/animate';
+import { routeMainAnimationTrigger } from '../animations/route-animate';
 
 @Component({
   selector: 'app-search-area',
   templateUrl: './search-area.component.html',
   styleUrls: ['./search-area.component.css'],
-  animations: [classStagger, simpleFade, fadingTrigger],
+  animations: [classStagger, simpleFade, fadingTrigger, routeMainAnimationTrigger],
 })
 export class SearchAreaComponent implements OnInit {
+  @HostBinding('@routeMainAnimation') routeAnimation = true;
+
   hideEmpty: boolean;
   isView: boolean;
   results = [

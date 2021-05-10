@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .example {
   border: 1px solid rgba(var(--rgb-primary), 0.2);
   border-radius: var(--br-sm);

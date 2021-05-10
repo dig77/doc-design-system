@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
+import { routeMainAnimationTrigger } from '../animations/route-animate';
 
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.css']
+  styleUrls: ['./tables.component.css'],
+  animations: [routeMainAnimationTrigger]
 })
 export class TablesComponent implements OnInit {
+  @HostBinding('@routeMainAnimation') routeAnimation = true;
 
   selectedIndex = 2;
 
