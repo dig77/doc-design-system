@@ -3,14 +3,16 @@ import { classStagger, fadingTrigger, showExpandableTrigger } from '../animation
 import { AppComponent } from '../app.component';
 import { AreaLink } from '../shared/models/area-link.model';
 import { AREA_LINK } from '../shared/models/area-link';
+import { routeMainAnimationTrigger } from '../animations/route-animate';
 
 @Component({
   selector: 'app-company-info',
   templateUrl: './company-info.component.html',
   styleUrls: ['./company-info.component.css'],
-  animations: [showExpandableTrigger, classStagger, fadingTrigger]
+  animations: [showExpandableTrigger, classStagger, fadingTrigger, routeMainAnimationTrigger]
 })
 export class CompanyInfoComponent implements OnInit {
+  @HostBinding('@routeMainAnimation') routeAnimation = true;
 
   arealinks: AreaLink[] = AREA_LINK;
 
