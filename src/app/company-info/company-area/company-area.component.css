@@ -1,0 +1,36 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.is-area {
+  margin: 0 1em 1em 0;
+  background-color: rgb(62 62 62 / 9%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em 1.5em 0.6em;
+  border-radius: var(--br-xs);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.is-area + button {
+  margin-bottom: 1em;
+}
+
+.is-area:hover {
+  background-color: var(--color-primary);
+  color: var(--primary-contrast);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.is-area-icon {
+  padding-right: 0.7em;
+}
+
+.is-area-label {
+  font-family: var(--alternative-font);
+  font-weight: 600;
+}

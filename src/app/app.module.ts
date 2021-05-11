@@ -17,6 +17,7 @@ import { CompanyActionsComponent } from './company-info/company-actions/company-
 import { CommonModule } from '@angular/common';
 import { ThemeToggler } from './shared/services/theme-toggle.service';
 import { TablesComponent } from './tables/tables.component';
+import { CompanyAreaComponent } from './company-info/company-area/company-area.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TablesComponent } from './tables/tables.component';
     EmptySearchComponent,
     ResultCardComponent,
     CompanyActionsComponent,
-    TablesComponent
+    TablesComponent,
+    CompanyAreaComponent
   ],
   imports: [
     BrowserModule,

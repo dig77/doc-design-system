@@ -172,19 +172,19 @@ app-intro header h1 {
   color: rgba(0, 0, 0, 0.77);
 }
 
-.areas-wrap > app-company-area:nth-child(4n+1) .is-area-icon {
+.company-area-wrap > app-company-area:nth-child(4n+1) .is-area-icon {
   color:var(--area-color-1);
 }
 
-.areas-wrap > app-company-area:nth-child(4n+2) .is-area-icon {
+.company-area-wrap > app-company-area:nth-child(4n+2) .is-area-icon {
   color:var(--area-color-2);
 }
 
-.areas-wrap > app-company-area:nth-child(4n+3) .is-area-icon {
+.company-area-wrap > app-company-area:nth-child(4n+3) .is-area-icon {
   color:var(--area-color-3);
 }
 
-.areas-wrap > app-company-area:nth-child(4n+4) .is-area-icon {
+.company-area-wrap > app-company-area:nth-child(4n+4) .is-area-icon {
   color:var(--area-color-4);
 }
 

@@ -1,0 +1,24 @@
+
+<div class="is-area">
+  <div class="is-area-icon">
+    <span class="material-icons">
+      {{ area.icon }}
+    </span>
+  </div>
+  <div class="is-area-label">{{ area.title }}</div>
+</div>
+<button
+  mat-flat-button
+  *ngIf="i == 4 && show == 5"
+  (click)="showMoreAreas()"
+>
+  show More
+</button>
+<button
+  mat-flat-button
+  *ngIf="i == 12"
+  (click)="showLessAreas()"
+>
+  Close
+</button>
+
