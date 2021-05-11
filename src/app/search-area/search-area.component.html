@@ -51,7 +51,7 @@
     </div>
     <div class="results" [ngClass]="isView ? 'card-view' : 'list-view'">
       <app-result-card
-        *ngFor="let result of results"
+        *ngFor="let result of results | async"
         [result]="result"
         [ngClass]="{ listed: !isView, grid: isView }"
         [@isFade]="isView"

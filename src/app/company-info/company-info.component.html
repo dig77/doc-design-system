@@ -229,7 +229,7 @@
     </div>
     <div class="actions-list">
       <app-company-actions
-        *ngFor="let action of actions"
+        *ngFor="let action of actions | async"
         [action]="action"
         class="child"
       ></app-company-actions>
