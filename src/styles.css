@@ -41,6 +41,7 @@
   --br-lg: 20px;
 
   /* area-links */
+  --area-bg: rgb(62 62 62 / 9%);
   --area-color-1: #d81b60;
   --area-color-2: #5e35b1;
   --area-color-3: #1e88e5;
@@ -82,6 +83,13 @@
   --br-sm: 10px;
   --br-md: 15px;
   --br-lg: 20px;
+
+  /* area-links */
+  --area-bg: rgb(53 55 64 / 85%);
+  --area-color-1: #d81b60;
+  --area-color-2: #5e35b1;
+  --area-color-3: #1e88e5;
+  --area-color-4: #00acc1;
 }
 
 body,
@@ -172,20 +180,20 @@ app-intro header h1 {
   color: rgba(0, 0, 0, 0.77);
 }
 
-.company-area-wrap > app-company-area:nth-child(4n+1) .is-area-icon {
-  color:var(--area-color-1);
+.company-area-wrap > app-company-area:nth-child(4n + 1) .is-area-icon {
+  color: var(--area-color-1);
 }
 
-.company-area-wrap > app-company-area:nth-child(4n+2) .is-area-icon {
-  color:var(--area-color-2);
+.company-area-wrap > app-company-area:nth-child(4n + 2) .is-area-icon {
+  color: var(--area-color-2);
 }
 
-.company-area-wrap > app-company-area:nth-child(4n+3) .is-area-icon {
-  color:var(--area-color-3);
+.company-area-wrap > app-company-area:nth-child(4n + 3) .is-area-icon {
+  color: var(--area-color-3);
 }
 
-.company-area-wrap > app-company-area:nth-child(4n+4) .is-area-icon {
-  color:var(--area-color-4);
+.company-area-wrap > app-company-area:nth-child(4n + 4) .is-area-icon {
+  color: var(--area-color-4);
 }
 
 /* dark theme styles */

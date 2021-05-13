@@ -34,7 +34,7 @@
     class="company-header-alt"
     [ngClass]="expanded ? 'is-expanded' : 'not-expanded'"
   >
-    <div class="is-company" [@isFade]="expanded">
+    <div class="is-company" [@animateLogo]="animateState ? 'initial': 'aligned'" >
       <div class="company-image">
         <img
           src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
@@ -45,7 +45,7 @@
         <span class="tag is-primary">Active</span>
       </div>
     </div>
-    <div class="alt-top" [@isFade]="expanded">
+    <div class="alt-top" [@animateName]="animateState ? 'initial': 'aligned'" >
       <div class="alt-company">
         <div class="company-name">Company A</div>
         <div class="company-user-email">usertest@company.com</div>
@@ -54,7 +54,7 @@
         <button mat-raised-button color="primary">Edit</button>
       </div>
     </div>
-    <div class="alt-bottom">
+    <div class="alt-bottom" [@isFade]="expanded">
       <!-- new company area -->
       <div class="company-area-wrap">
         <app-company-area

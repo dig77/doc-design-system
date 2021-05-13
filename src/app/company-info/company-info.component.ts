@@ -1,8 +1,10 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import {
+  animateLogoTrigger,
+  animateNameTrigger,
   classStagger,
   fadingTrigger,
-  showExpandableTrigger,
+  showExpandableTrigger
 } from '../animations/animate';
 import { AppComponent } from '../app.component';
 import { routeMainAnimationTrigger } from '../animations/route-animate';
@@ -21,6 +23,8 @@ import { Action } from '../shared/interfaces/action';
     classStagger,
     fadingTrigger,
     routeMainAnimationTrigger,
+    animateLogoTrigger,
+    animateNameTrigger
   ],
 })
 export class CompanyInfoComponent implements OnInit {
@@ -37,6 +41,7 @@ export class CompanyInfoComponent implements OnInit {
   };
   showActions: boolean = false;
   areasSize: number;
+  animateState :boolean;
 
   constructor(
     private appComponent: AppComponent,
@@ -50,6 +55,7 @@ export class CompanyInfoComponent implements OnInit {
       this.areasSize = areas.length;
     });
     this.actions = this.actionService.getActions();
+    console.log(this.animateState);
   }
 
   toggle(string: any): void {
@@ -63,10 +69,14 @@ export class CompanyInfoComponent implements OnInit {
   onMoreAreas() {
     this.show = this.areasSize;
     this.expanded = true;
+    this.animateState = true;
+    console.log(this.animateState);
   }
 
   onLessAreas() {
     this.show = 5;
     this.expanded = false;
+    this.animateState = false;
+    console.log(this.animateState);
   }
 }

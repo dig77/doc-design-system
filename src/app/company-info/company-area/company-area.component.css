@@ -5,7 +5,7 @@
 
 .is-area {
   margin: 0 1em 1em 0;
-  background-color: rgb(62 62 62 / 9%);
+  background-color: var(--area-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,4 +33,5 @@
 .is-area-label {
   font-family: var(--alternative-font);
   font-weight: 600;
+  letter-spacing: 1px;
 }

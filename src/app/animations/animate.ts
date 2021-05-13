@@ -116,8 +116,30 @@ export const fadingTrigger = trigger('isFade', [
             style({opacity:0.5}),
             style({opacity:1})
           ]))
+      ])
+]);
+
+export const animateLogoTrigger = trigger('animateLogo', [
+      transition('initial => aligned', [
+        style({opacity:0, transform: 'translateY(-50px)'}),
+        animate('500ms ease-out', style({opacity:1, transform: 'translateY(0)'}))
       ]),
-])
+      transition('aligned => initial', [
+        style({opacity:0, transform: 'translateY(50px)'}),
+        animate('500ms ease-out', style({opacity:1, transform: 'translateY(0)'}))
+      ])
+]);
+
+export const animateNameTrigger = trigger('animateName', [
+    transition('initial => aligned', [
+      style({opacity:0, transform: 'translateX(50px)'}),
+      animate('500ms ease-out', style({opacity:1, transform: 'translateY(0)'}))
+    ]),
+    transition('aligned => initial', [
+      style({opacity:0, transform: 'translateX(-50px)'}),
+      animate('500ms ease-out', style({opacity:1, transform: 'translateY(0)'}))
+    ])
+]);
 
 
 
