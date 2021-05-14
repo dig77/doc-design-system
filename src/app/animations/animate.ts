@@ -1,4 +1,4 @@
-import {style, transition, animate, trigger, query, state, group, keyframes, stagger} from '@angular/animations';
+import {style, transition, animate, trigger, query, state, group, keyframes, stagger, animation, useAnimation} from '@angular/animations';
 
 export const introAnimationTrigger = trigger('introAnimation', [
     transition(':enter', [
@@ -109,9 +109,22 @@ export const simpleFade = trigger('simpleFade', [
     ])
 ])
 
-export const fadingTrigger = trigger('isFade', [
+const fadeAnimation = animation([
+    style({
+        opacity: '{{startOpacity}}'
+    }),
+    animate('{{ duration }}')
+], {params: {startOpacity:0, duration:'500ms'}})
+
+export const fadingTrigger2 = (params) => trigger('isFade2', [
     transition('* => *', [
-        animate(500, keyframes([
+        useAnimation(fadeAnimation, {params: params})
+      ])
+]);
+
+export const fadingTrigger =  trigger('isFade', [
+    transition('* => *', [
+        animate(5000, keyframes([
             style({opacity:0}),
             style({opacity:0.5}),
             style({opacity:1})
@@ -140,6 +153,33 @@ export const animateNameTrigger = trigger('animateName', [
       animate('500ms ease-out', style({opacity:1, transform: 'translateY(0)'}))
     ])
 ]);
+
+export const areaListTrigger = trigger('areaList', [
+    transition('still => activate', [
+        query('.test', style({opacity: 0, transform: 'translateX(-30px)'})),
+        query('.test', stagger('300ms', [
+            animate('500ms ease-in-out', style({opacity: 1, transform: 'translateX(0)'}))
+        ]))
+        // query(':enter',  style({opacity: 0, transform: 'translateX(-30px)'})),
+        // query(':enter', 
+        //     stagger('300ms', [
+        //         animate(500, style({
+        //             opacity: 1,
+        //             transform:'translateX(0)'
+        //         }))
+        //     ]))
+    ]),
+    transition('activate => still', [
+        style({
+            opacity:0
+        }), 
+        animate('500ms', style({
+            opacity: 1
+        }))
+    ])
+]);
+
+
 
 
 

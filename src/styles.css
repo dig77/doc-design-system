@@ -42,6 +42,7 @@
 
   /* area-links */
   --area-bg: rgb(62 62 62 / 9%);
+  --area-bt: #fff;
   --area-color-1: #d81b60;
   --area-color-2: #5e35b1;
   --area-color-3: #1e88e5;
@@ -86,6 +87,7 @@
 
   /* area-links */
   --area-bg: rgb(53 55 64 / 85%);
+  --area-bt: #191921;
   --area-color-1: #d81b60;
   --area-color-2: #5e35b1;
   --area-color-3: #1e88e5;
@@ -267,3 +269,4 @@ app-intro header h1 {
 .dark .main-container .mat-input-element:disabled {
   color: rgba(240, 240, 240, 0.6);
 }
+

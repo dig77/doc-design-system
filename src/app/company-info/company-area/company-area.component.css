@@ -35,3 +35,8 @@
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+.area-bt {
+  background-color: var(--area-bt);
+  color: var(--font-color-primary);
+}

@@ -2,7 +2,9 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import {
   animateLogoTrigger,
   animateNameTrigger,
+  areaListTrigger,
   classStagger,
+  fadingTrigger2,
   fadingTrigger,
   showExpandableTrigger
 } from '../animations/animate';
@@ -21,10 +23,12 @@ import { Action } from '../shared/interfaces/action';
   animations: [
     showExpandableTrigger,
     classStagger,
+    fadingTrigger2({startOpacity:0, midOpacity:0.5, finishOpacity:1, duration:'5000ms'}),
     fadingTrigger,
     routeMainAnimationTrigger,
     animateLogoTrigger,
-    animateNameTrigger
+    animateNameTrigger,
+    areaListTrigger
   ],
 })
 export class CompanyInfoComponent implements OnInit {
@@ -41,7 +45,7 @@ export class CompanyInfoComponent implements OnInit {
   };
   showActions: boolean = false;
   areasSize: number;
-  animateState :boolean;
+  animateState :boolean = false;
 
   constructor(
     private appComponent: AppComponent,
@@ -55,7 +59,6 @@ export class CompanyInfoComponent implements OnInit {
       this.areasSize = areas.length;
     });
     this.actions = this.actionService.getActions();
-    console.log(this.animateState);
   }
 
   toggle(string: any): void {

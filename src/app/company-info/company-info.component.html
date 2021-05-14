@@ -54,9 +54,9 @@
         <button mat-raised-button color="primary">Edit</button>
       </div>
     </div>
-    <div class="alt-bottom" [@isFade]="expanded">
+    <div class="alt-bottom" [@areaList]="animateState ? 'activate':'still'">
       <!-- new company area -->
-      <div class="company-area-wrap">
+      <div class="company-area-wrap" [@areaList]="animateState ? 'activate':'still'">
         <app-company-area
           *ngFor="let area of areas | async | slice: 0:show; let i = index"
           [area]="area"
@@ -65,6 +65,7 @@
           [areas]="areas"
           (moreAreas)="onMoreAreas($event)"
           (lessAreas)="onLessAreas($event)"
+          class="test"
         ></app-company-area>
       </div>
     </div>
