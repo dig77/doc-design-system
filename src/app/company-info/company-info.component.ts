@@ -4,7 +4,7 @@ import {
   animateNameTrigger,
   areaListTrigger,
   classStagger,
-  fadingTrigger2,
+  fadingReUsableTrigger,
   fadingTrigger,
   showExpandableTrigger
 } from '../animations/animate';
@@ -23,7 +23,7 @@ import { Action } from '../shared/interfaces/action';
   animations: [
     showExpandableTrigger,
     classStagger,
-    fadingTrigger2({startOpacity:0, midOpacity:0.5, finishOpacity:1, duration:'5000ms'}),
+    fadingReUsableTrigger({startOpacity:0, midOpacity:0.5, finishOpacity:1, duration:'5000ms'}),
     fadingTrigger,
     routeMainAnimationTrigger,
     animateLogoTrigger,

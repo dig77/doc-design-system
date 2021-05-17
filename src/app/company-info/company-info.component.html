@@ -34,7 +34,10 @@
     class="company-header-alt"
     [ngClass]="expanded ? 'is-expanded' : 'not-expanded'"
   >
-    <div class="is-company" [@animateLogo]="animateState ? 'initial': 'aligned'" >
+    <div
+      class="is-company"
+      [@animateLogo]="animateState ? 'initial' : 'aligned'"
+    >
       <div class="company-image">
         <img
           src="https://www.freepnglogos.com/uploads/company-logo-png/company-logo-transparent-png-19.png"
@@ -45,7 +48,7 @@
         <span class="tag is-primary">Active</span>
       </div>
     </div>
-    <div class="alt-top" [@animateName]="animateState ? 'initial': 'aligned'" >
+    <div class="alt-top" [@animateName]="animateState ? 'initial' : 'aligned'">
       <div class="alt-company">
         <div class="company-name">Company A</div>
         <div class="company-user-email">usertest@company.com</div>
@@ -54,9 +57,12 @@
         <button mat-raised-button color="primary">Edit</button>
       </div>
     </div>
-    <div class="alt-bottom" [@areaList]="animateState ? 'activate':'still'">
+    <div class="alt-bottom" [@areaList]="animateState ? 'activate' : 'still'">
       <!-- new company area -->
-      <div class="company-area-wrap" [@areaList]="animateState ? 'activate':'still'">
+      <div
+        class="company-area-wrap"
+        [@areaList]="animateState ? 'activate' : 'still'"
+      >
         <app-company-area
           *ngFor="let area of areas | async | slice: 0:show; let i = index"
           [area]="area"
@@ -71,7 +77,7 @@
     </div>
   </div>
   <!-- details area -->
-  <div class="company-main-details">
+  <div class="company-main-details" [@isFade]="animateState">
     <div class="is-card">
       <div class="company-details">
         <div class="is-card-header">

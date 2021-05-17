@@ -116,7 +116,7 @@ const fadeAnimation = animation([
     animate('{{ duration }}')
 ], {params: {startOpacity:0, duration:'500ms'}})
 
-export const fadingTrigger2 = (params) => trigger('isFade2', [
+export const fadingReUsableTrigger = (params) => trigger('isFadeReUse', [
     transition('* => *', [
         useAnimation(fadeAnimation, {params: params})
       ])
@@ -124,7 +124,7 @@ export const fadingTrigger2 = (params) => trigger('isFade2', [
 
 export const fadingTrigger =  trigger('isFade', [
     transition('* => *', [
-        animate(5000, keyframes([
+        animate(500, keyframes([
             style({opacity:0}),
             style({opacity:0.5}),
             style({opacity:1})

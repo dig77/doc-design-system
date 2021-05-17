@@ -1,24 +1,32 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
+import { fadingReUsableTrigger } from '../animations/animate';
 import { routeMainAnimationTrigger } from '../animations/route-animate';
 
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css'],
-  animations: [routeMainAnimationTrigger]
+  animations: [
+    routeMainAnimationTrigger,
+    fadingReUsableTrigger({
+      startOpacity: 0,
+      duration: '1000ms',
+    })
+  ],
 })
 export class TablesComponent implements OnInit {
   @HostBinding('@routeMainAnimation') routeAnimation = true;
 
   selectedIndex = 2;
 
-  constructor() { }
+  triggerTab: boolean;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
-  snippet1 = 
-  `<table class="app-table">
+  ngOnInit(): void {}
+
+  snippet1 = `
+  <table class="app-table">
   <tr class="is-header">
     <th>Document Number</th>
     <th>Document Type</th>
@@ -112,10 +120,9 @@ export class TablesComponent implements OnInit {
       </button>
     </td>
   </tr>
-</table>`
+</table>`;
 
-snippet2 = 
-  `
+  snippet2 = `
   .app-table {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
@@ -239,6 +246,9 @@ snippet2 =
     }
   }
   
-  `
+  `;
 
+  tabClick(tab: any): void {
+    this.triggerTab = !this.triggerTab;
+  }
 }

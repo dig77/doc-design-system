@@ -9,15 +9,19 @@
   </p>
   <div class="example">
     <h2>Basic use of table</h2>
-    <mat-tab-group animationDuration="0ms" [(selectedIndex)]="selectedIndex">
+    <mat-tab-group animationDuration="0ms" [(selectedIndex)]="selectedIndex" (selectedTabChange)="tabClick($event)">
       <mat-tab label="HTML">
-        <pre>{{ snippet1 }}</pre>
+        <div [@isFadeReUse]="triggerTab">
+          <pre>{{ snippet1 }}</pre>
+        </div>
       </mat-tab>
       <mat-tab label="CSS">
-        <pre>{{ snippet2 }}</pre>
+        <div [@isFadeReUse]="triggerTab">
+          <pre>{{ snippet2 }}</pre>
+        </div>
       </mat-tab>
       <mat-tab label="Result">
-        <div class="table-wrap">
+        <div class="table-wrap" [@isFadeReUse]="triggerTab">
           <table class="app-table">
             <tr class="is-header">
               <th>Document Number</th>
