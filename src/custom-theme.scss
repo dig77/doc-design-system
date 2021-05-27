@@ -49,6 +49,15 @@ $doc-design-system-theme: mat-light-theme((
   @include angular-material-color($dark-theme);
 }
 
+.espap {
+  $dt-primary: mat-palette($mat-blue, 700);
+  $dt-accent: mat-palette($mat-teal, 600);
+  $dt-warn: mat-palette($mat-red, 700);
+
+  $espap-theme: mat-light-theme($dt-primary, $dt-accent,$dt-warn);
+  @include angular-material-color($espap-theme);
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.

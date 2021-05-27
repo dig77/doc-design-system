@@ -94,6 +94,52 @@
   --area-color-4: #00acc1;
 }
 
+.espap {
+  /* background */
+  --bg-color: #f7f8fa;
+  --mobile-nav-bg: #eeeeee;
+
+  /* typography */
+  --main-font: "Quicksand", sans-serif;
+  --alternative-font: "Bitter", serif;
+  --font-color-primary: #212121;
+  --font-color-alternative: #757575;
+  --primary-contrast: #fff;
+
+  /* colors */
+  --rgb-primary: 64, 129, 203;
+  --color-primary: #4081CB;
+  --rgb-secondary:49, 135, 132;
+  --color-secondary: #318784;
+  --color-danger: #e53935;
+  --color-success: #43a047;
+  --color-link: #2196f3;
+
+  /* shadows */
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* cards */
+  --card-bg: #fff;
+
+  /* border-radius */
+  --br-xs: 5px;
+  --br-sm: 10px;
+  --br-md: 15px;
+  --br-lg: 20px;
+
+  /* area-links */
+  --area-bg: rgb(62 62 62 / 9%);
+  --area-bt: #fff;
+  --area-color-1: #d81b60;
+  --area-color-2: #5e35b1;
+  --area-color-3: #1e88e5;
+  --area-color-4: #00acc1;
+}
+
 body,
 html {
   height: 100%;
